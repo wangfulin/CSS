@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script>
+
+		</script>
+		<style>
+			.circle-rotating{
+				width:200px;
+				height:200px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				border:1px solid rgb(255,0,255);
+				position:absolute;
+				left:100px;
+				top:200px;
+			}
+			.inner-circle{
+				width:150px;
+				height:150px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				margin-top:25px;
+				margin-left:25px;
+				background-color:rgb(255,0,255);
+				position:absolute;
+			}
+			.rotating-circle{
+				width:10px;
+				height:10px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				-webkit-animation:rotate 2s ease-in infinite;
+				-moz-animation:rotate 2s ease-in infinite;
+				-ms-animation:rotate 2s ease-in infinite;
+				-o-animation:rotate 2s ease-in infinite;
+				animation:rotate 2s ease-in infinite;
+				-webkit-transform-origin:105px 5px;
+				-moz-transform-origin:100px 100px;
+				-o-transform-origin:100px 100px;
+				-ms-transform-origin:100px 100px;
+				transform-origin:100px 100px;
+				background-color:rgb(255,0,255);
+				position:absolute;
+				top:95px;
+				left:-5px;
+			}
+			@-webkit-keyframes rotate{
+				0%{
+					-webkit-transform:rotate(0deg);
+					-moz-transform:rotate(0deg);
+					-ms-transform:rotate(0deg);
+					-o-transform:rotate(0deg);
+					transform:rotate(0deg);
+					
+				}
+				50%{
+					-webkit-transform:rotate(180deg);
+					-moz-transform:rotate(180deg);
+					-ms-transform:rotate(180deg);
+					-o-transform:rotate(180deg);
+					transform:rotate(180deg);
+				}
+				100%{
+					-webkit-transform:rotate(360deg);
+					-moz-transform:rotate(360deg);
+					-ms-transform:rotate(360deg);
+					-o-transform:rotate(360deg);
+					transform:rotate(360deg);
+				}
+			}
+			@-moz-keyframes rotate{
+				0%{
+					-webkit-transform:rotate(0deg);
+					-moz-transform:rotate(0deg);
+					-ms-transform:rotate(0deg);
+					-o-transform:rotate(0deg);
+					transform:rotate(0deg);
+					
+				}
+				50%{
+					-webkit-transform:rotate(180deg);
+					-moz-transform:rotate(180deg);
+					-ms-transform:rotate(180deg);
+					-o-transform:rotate(180deg);
+					transform:rotate(180deg);
+				}
+				100%{
+					-webkit-transform:rotate(360deg);
+					-moz-transform:rotate(360deg);
+					-ms-transform:rotate(360deg);
+					-o-transform:rotate(360deg);
+					transform:rotate(360deg);
+				}
+			}
+			@-ms-keyframes rotate{
+				0%{
+					-webkit-transform:rotate(0deg);
+					-moz-transform:rotate(0deg);
+					-ms-transform:rotate(0deg);
+					-o-transform:rotate(0deg);
+					transform:rotate(0deg);
+					
+				}
+				50%{
+					-webkit-transform:rotate(180deg);
+					-moz-transform:rotate(180deg);
+					-ms-transform:rotate(180deg);
+					-o-transform:rotate(180deg);
+					transform:rotate(180deg);
+				}
+				100%{
+					-webkit-transform:rotate(360deg);
+					-moz-transform:rotate(360deg);
+					-ms-transform:rotate(360deg);
+					-o-transform:rotate(360deg);
+					transform:rotate(360deg);
+				}
+			}
+			@-o-keyframes rotate{
+				0%{
+					-webkit-transform:rotate(0deg);
+					-moz-transform:rotate(0deg);
+					-ms-transform:rotate(0deg);
+					-o-transform:rotate(0deg);
+					transform:rotate(0deg);
+					
+				}
+				50%{
+					-webkit-transform:rotate(180deg);
+					-moz-transform:rotate(180deg);
+					-ms-transform:rotate(180deg);
+					-o-transform:rotate(180deg);
+					transform:rotate(180deg);
+				}
+				100%{
+					-webkit-transform:rotate(360deg);
+					-moz-transform:rotate(360deg);
+					-ms-transform:rotate(360deg);
+					-o-transform:rotate(360deg);
+					transform:rotate(360deg);
+				}
+			}
+			@keyframes rotate{
+				0%{
+					-webkit-transform:rotate(0deg);
+					-moz-transform:rotate(0deg);
+					-ms-transform:rotate(0deg);
+					-o-transform:rotate(0deg);
+					transform:rotate(0deg);
+					
+				}
+				50%{
+					-webkit-transform:rotate(180deg);
+					-moz-transform:rotate(180deg);
+					-ms-transform:rotate(180deg);
+					-o-transform:rotate(180deg);
+					transform:rotate(180deg);
+				}
+				100%{
+					-webkit-transform:rotate(360deg);
+					-moz-transform:rotate(360deg);
+					-ms-transform:rotate(360deg);
+					-o-transform:rotate(360deg);
+					transform:rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="circle-rotating circle1">
+			<div class="inner-circle">
+
+			</div>
+			<div class="rotating-circle">
+
+			</div>
+		</div>
+	</body>
+</html>

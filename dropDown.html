@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.container{
+				width:400px;
+				height:50px;
+				position:relative;
+				margin:0px;
+				padding:0px;
+			}
+			.content{
+				width:400px;
+				height:50px;
+				background-color:rgb(0,161,233);
+				position:relative;
+			}
+			.content-header{
+				width:200px;
+				height:50px;
+				position:relative;
+			}
+			.font-setting{
+				font-size:24px;
+				color:white;
+			}
+			.go-back{
+				position:absolute;
+				line-height:50px;
+				vertical-align:middle;
+				padding-left:20px;
+			}
+			.profile{
+				width:400px;
+				height:50px;
+				text-align:center;
+				line-height:50px;
+				vertical-align:middle;
+			}
+			.more-item-wrapper{
+				width:30px;
+				height:50px;
+				position:absolute;
+				top:0px;
+				right:-180px;
+			}
+			.more-item{
+				position:absolute;
+				top:24px;
+				right:-19px;
+				width:30px;
+				height:2px;
+				line-height:50px;;
+				vertical-align:middle;
+				margin-right:20px;
+				background-color:white;
+				/*transition:all 1s linear;
+				-webkit-transition:all 1s linear;
+				-moz-transition:all 1s linear;
+				-o-transition:all 1s linear;
+				-ms-transition:all 1s linear;*/
+			}
+			.more-item:before{
+				position:absolute;
+				content:"";
+				width:30px;
+				height:2px;
+				top:10px;
+				left:0px;
+				background-color:white;
+			}
+			.more-item:after{
+				position:absolute;
+				content:"";
+				width:30px;
+				height:2px;
+				top:-10px;
+				left:0px;
+				background-color:white;
+			}
+			.inner-content{
+				background-color:rgb(0,161,233);
+				height:0px;
+			}
+			.inner-content>ul{
+				list-style:none;
+				box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-ms-box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+				-o-box-sizing:border-box;
+				padding:0px;
+				margin:0px;
+			}
+			.inner-content>ul>li{
+				margin-left:0px;
+				border-top:1px solid white;
+				text-align:center;
+				padding:10px 0px;
+			}
+			.inner-content>ul>li>a{
+				text-decoration:none;
+			}
+			.close-item{
+				width:34px;
+				height:2px;
+				transform:rotate(45deg);
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+
+				position:absolute;
+				top:24px;
+				right:-2px;
+				background-color:white;
+			}
+			.close-item:after{
+				width:34px;
+				height:2px;
+				transform:rotate(90deg);
+				-webkit-transform:rotate(90deg);
+				-moz-transform:rotate(90deg);
+				-ms-transform:rotate(90deg);
+				-o-transform:rotate(90deg);
+				content:"";
+				position:absolute;
+				top:0px;
+				right:0px;
+				background-color:white;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var show_more=document.getElementById("show-more");
+				var inner_content=document.getElementById("inner-content");
+				var show_more_btn=document.getElementById("show-more-btn");
+				var content_height=0;
+				show_more.onclick=function(){
+					if(show_more_btn.className==="more-item"){
+						show_more_btn.className="close-item";
+
+						var interId=setInterval(function(){
+						if(content_height<190){
+							content_height+=10;
+						}else if(content_height>190){
+							content_height=190;
+						}else{
+							clearInterval(interId);
+						}
+						inner_content.style.height=content_height+"px";						
+					},20);
+					}else{
+						show_more_btn.className="more-item";
+
+						var interId=setInterval(function(){
+						if(content_height>0){
+							content_height-=10;
+						}else if(content_height<0){
+							content_height=0;
+						}else{
+							clearInterval(interId);
+						}
+						inner_content.style.height=content_height+"px";						
+					},20);
+					}
+				}	
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<div class="content-header">
+					<span class="font-setting go-back">返回</span>
+					<h5 class="font-setting profile">个人中心</h5>
+					<div id="show-more" class="more-item-wrapper"><span id="show-more-btn" class="more-item"></span></div>
+				</div>
+				<div id="inner-content" class="inner-content">
+					<ul>
+						<li><a href="#" class="font-setting">我的主页</a></li>
+						<li><a href="#" class="font-setting">私信</a></li>
+						<li><a href="#" class="font-setting">设置</a></li>
+						<li><a href="#" class="font-setting">退出</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

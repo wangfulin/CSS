@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			html,body{
+				width:100%;
+				height:100%;
+				overflow:hidden;
+			}
+			.wrapper{
+				position:relative;
+				width:100%;
+				height:100%;
+			}
+			.btn{
+				width:400px;
+				height:50px;
+				border-radius:5px;
+				-webkit-border-radius:5px;
+				-moz-border-radius:5px;
+				-ms-border-radius:5px;
+				-o-border-radius:5px;
+				background-color:rgb(231,50,104);
+				color:white;
+				font-size:16px;
+				text-indent:10px;
+				line-height:50px;
+				vertical-align:middle;
+				text-align:center;
+				position:absolute;
+				left:50%;
+				transform:translate(-50%,0);
+				-webkit-transform:translate(-50%,0);
+				-moz-transform:translate(-50%,0);
+				-ms-transform:translate(-50%,0);
+				-o-transform:translate(-50%,0);
+				cursor:pointer;
+			}
+			.cover{
+				width:100%;
+				height:100%;
+				background-color:rgb(121,121,121);
+				position:fixed;
+				left:0px;
+				top:0px;
+				display:none;
+			}
+			.dialog{
+				width:600px;
+				height:100px;
+				border-radius:5px;
+				-webkit-border-radius:5px;
+				-moz-border-radius:5px;
+				-ms-border-radius:5px;
+				-o-border-radius:5px;
+				font-size:16px;
+				background-color:white;
+				z-index:100;
+
+				box-shadow:1px solid #666;
+				-moz-box-shadow:1px solid #666;
+				-ms-box-shadow:1px solid #666;
+				-o-box-shadow:1px solid #666;
+				-webkit-box-shadow:1px solid #666;
+
+				position:absolute;
+				left:0px;
+				top:0px;
+				right:0px;
+				bottom:0px;
+				margin:auto;
+			}
+			.title{
+				height:50%;
+				border-bottom:1px solid rgb(231,50,104);
+				color:rgb(231,50,104);
+				line-height:50px;
+				vertical-align:middle;
+				padding-left:10px;
+			}
+			.choice{
+				position:relative;
+			}
+			.left{
+				overflow:hidden;
+				float:left;
+				width:300px;
+				line-height:50px;
+				vertical-align:middle;
+				padding-left:10px;
+				border-right:1px solid rgb(234,234,234);
+				box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-ms-box-sizing:border-box;
+				-o-box-sizing:border-box;
+				cursor:pointer;
+			}
+			.right{
+				float:right;
+				width:300px;
+				color:rgb(231,50,104);
+				line-height:50px;
+				vertical-align:middle;
+				padding-left:10px;
+				box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-ms-box-sizing:border-box;
+				-o-box-sizing:border-box;
+				cursor:pointer;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var jumpOut=document.getElementById("jumpOut");
+				var cover=document.getElementById("cover");
+				var cancel=document.getElementById("cancel");
+				var reconsider=document.getElementById("reconsider");
+				jumpOut.onclick=function(){
+					cover.style.display="block";
+				}	
+
+				cancel.onclick=function(){
+					cover.style.display="none";
+				}
+
+				reconsider.onclick=function(){
+					cover.style.display="none";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div id="jumpOut" class="btn">
+				取消
+			</div>
+		</div>
+		<div id="cover" class="cover">
+				<div class="dialog">
+					<div class="title">
+						确定取消吗？
+					</div>
+					<div class="choice">
+						<div id="cancel" class="left">
+							我要取消
+						</div>
+						<div id="reconsider" class="right">
+							再三考虑
+						</div>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>
