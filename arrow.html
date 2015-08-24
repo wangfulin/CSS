@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			html,body{
+				margin:0px;
+				padding:0px;
+				width:100%;
+				height:100%;
+			}
+			.container{
+				width:100%;
+				height:100%;
+				background-color:rgb(51,171,131);
+			}
+			.content-wrapper{
+				width:600px;
+				height:300px;
+				position:absolute;
+				left:50%;
+				top:50%;
+				margin-top:-150px;
+				margin-left:-200px;
+			}
+			.content{
+				width:100%;
+				height:100%;
+				
+				position:relative;
+			}
+			.curr-state{
+				position:absolute;
+				height:60px;
+				width:200px;
+				left:50%;
+				top:50%;
+				margin-left:-100px;
+				margin-top:-30px;
+				font-size:30px;
+				-webkit-text-shadow:0px 2px 0px rgba(0,0,0,0.2);
+				-moz-text-shadow:0px 2px 0px rgba(0,0,0,0.2);
+				-ms-text-shadow:0px 2px 0px rgba(0,0,0,0.2);
+				-o-text-shadow:0px 2px 0px rgba(0,0,0,0.2);
+				text-shadow:0px 2px 0px rgba(0,0,0,0.2);
+				color:white;
+				text-align:center;
+			}
+			.arrow{
+				position:absolute;
+				height:80px;
+				width:50px;
+				top:50%;
+				margin-top:-40px;
+				cursor:pointer;
+			}
+			.arrow:hover>.top{
+				-webkit-transform:rotate(-26deg);
+				-moz-transform:rotate(-26deg);
+				-ms-transform:rotate(-26deg);
+				-o-transform:rotate(-26deg);
+				transform:rotate(-26deg);
+			}
+			.arrow:hover>.bottom{
+				-webkit-transform:rotate(26deg);
+				-moz-transform:rotate(26deg);
+				-ms-transform:rotate(26deg);
+				-o-transform:rotate(26deg);
+				transform:rotate(26deg);
+			}
+			.left-arrow{
+				left:0px;
+			}
+			.right-arrow{
+				right:0px;
+			}
+			.top{
+				display:inline-block;
+				position:absolute;
+				margin-top:40px;
+				width:56px;
+				height:5px;
+				background-color:white;
+				-webkit-transform:rotate(-36deg);
+				-moz-transform:rotate(-36deg);
+				-ms-transform:rotate(-36deg);
+				-o-transform:rotate(-36deg);
+				transform:rotate(-36deg);
+			}
+			.bottom{
+				position:absolute;
+				display:inline-block;
+				margin-top:40px;
+				width:56px;
+				height:5px;
+				background-color:white;
+				-webkit-transform:rotate(36deg);
+				-moz-transform:rotate(36deg);
+				-ms-transform:rotate(36deg);
+				-o-transform:rotate(36deg);
+				transform:rotate(36deg);
+			}
+			.left-top{
+				-webkit-transform-origin:left bottom;
+				-moz-transform-origin:left bottom;
+				-ms-transform-origin:left bottom;
+				-o-transform-origin:left bottom;
+				transform-origin:left bottom;
+			}
+			.left-bottom{
+				-webkit-transform-origin:left bottom;
+				-moz-transform-origin:left bottom;
+				-ms-transform-origin:left bottom;
+				-o-transform-origin:left bottom;
+				transform-origin:left bottom;
+			}
+			.right-top{
+				-webkit-transform-origin:right bottom;
+				-moz-transform-origin:right bottom;
+				-ms-transform-origin:right bottom;
+				-o-transform-origin:right bottom;
+				transform-origin:right bottom;
+			}
+			.right-bottom{
+				-webkit-transform-origin:right bottom;
+				-moz-transform-origin:right bottom;
+				-ms-transform-origin:right bottom;
+				-o-transform-origin:right bottom;
+				transform-origin:right bottom;
+			}
+			.start{
+				position:absolute;
+				width:50px;
+				height:5px;
+				background-color:rgb(111,196,168);
+				margin-top:22px;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var curr_num=document.getElementById("curr-num");
+				var total_num=document.getElementById("total-num");
+				var left_top=document.getElementById("leftTop");
+				var left_bottom=document.getElementById("leftBottom");
+				var right_top=document.getElementById("rightTop");
+				var right_bottom=document.getElementById("rightBottom");
+				var leftArrow=document.getElementById("leftArrow");
+				var rightArrow=document.getElementById("rightArrow");
+				leftArrow.onclick=function(){
+					if(parseInt(curr_num.innerText)>2){
+						curr_num.innerText=parseInt(curr_num.innerText)-1;
+						right_top.className="top right-top";
+						right_bottom.className="bottom right-bottom";
+					}else if(curr_num.innerText=="2"){
+						curr_num.innerText=parseInt(curr_num.innerText)-1;
+						left_top.className="start";
+						left_bottom.className="start";
+					}
+				}
+				
+				rightArrow.onclick=function(){
+					if(parseInt(curr_num.innerText)<parseInt(total_num.innerText)-1){
+						curr_num.innerText=parseInt(curr_num.innerText)+1;
+						left_top.className="top left-top";
+						left_bottom.className="bottom left-bottom";
+					}else if(parseInt(curr_num.innerText)==parseInt(total_num.innerText)-1){
+						curr_num.innerText=parseInt(curr_num.innerText)+1;
+						right_top.className="start";
+						right_bottom.className="start";
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content-wrapper">
+				<div class="content">
+					<div class="curr-state">
+						<span id="curr-num">1</span>/<span id="total-num">5</span>
+					</div>
+					<div id="leftArrow" class="arrow left-arrow">
+						<span id="leftTop" class="start"></span>
+						<span id="leftBottom" class="start"></span>
+					</div>
+					<div id="rightArrow" class="arrow right-arrow">
+						<span id="rightTop" class="top right-top"></span>
+						<span id="rightBottom" class="bottom right-bottom"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
