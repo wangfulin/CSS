@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.clock-container{
+				width:600px;
+				height:150px;
+				position:absolute;
+				left:50%;
+				top:50%;
+				margin-top:-75px;
+				margin-left:-250px;
+				display:block;
+				background-color:#ddd;
+			}
+			.clock{
+				position:relative;
+				width:500px;
+				height:90px;
+				margin-top:30px;
+				margin-left:60px;
+			}
+			div.clock>div{
+				display:inline-block;
+				width:50px;
+				height:90px;
+				position:relative;
+				margin-right:6px;
+			}
+			div.clock>div>span{
+				position:absolute;
+				background-color:black;
+			}
+			
+			
+			div.clock>div>span.horizontal{
+				width:32px;
+				height:6px;
+			}
+			div.clock>div>span.horizontal-top-left{
+				
+			}
+			div.clock>div>span.horizontal-top-left:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				left:-6px;
+				border-left:6px solid transparent;
+			}
+			div.clock>div>span.horizontal-top-right{
+				
+			}
+			div.clock>div>span.horizontal-top-right:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				right:-6px;
+				border-right:6px solid transparent;
+			}
+			div.clock>div>span.horizontal-bottom-left{
+				
+			}
+			div.clock>div>span.horizontal-bottom-left:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-bottom:6px solid black;
+				left:-6px;
+				border-left:6px solid transparent;
+			}
+			div.clock>div>span.horizontal-right{
+				
+			}
+			div.clock>div>span.horizontal-right:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				right:-6px;
+				border-right:6px solid transparent;
+			}
+			div.clock>div>span.horizontal-top-both{
+				
+			}
+			div.clock>div>span.horizontal-top-both:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				right:-6px;
+				border-right:6px solid transparent;
+			}
+			div.clock>div>span.horizontal-top-both:before{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				left:-6px;
+				border-left:6px solid transparent;
+			}
+			div.clock>div>span.horizontal-bottom-both{
+				
+			}
+			div.clock>div>span.horizontal-bottom-both:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-bottom:6px solid black;
+				right:-6px;
+				border-right:6px solid transparent;
+			}
+			div.clock>div>span.horizontal-bottom-both:before{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-bottom:6px solid black;
+				left:-6px;
+				border-left:6px solid transparent;
+			}
+			div.clock>div>span.horizontal-all{
+				
+			}
+			div.clock>div>span.horizontal-all:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-left:6px solid black;
+				right:-6px;
+				border-top:3px solid transparent;
+				border-bottom:3px solid transparent;
+			}
+			div.clock>div>span.horizontal-all:before{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-right:6px solid black;
+				left:-6px;
+				border-top:3px solid transparent;
+				border-bottom:3px solid transparent;
+			}
+			
+			
+			div.clock>div>span.vertical{
+				height:32px;
+				width:6px;
+			}
+			div.clock>div>span.vertical-left-top{
+				
+			}
+			div.clock>div>span.vertical-left-top:before{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-bottom:6px solid black;
+				border-right:6px solid transparent;
+				top:-6px;
+				z-index:10;
+			}
+			div.clock>div>span.vertical-right-top{
+				
+			}
+			div.clock>div>span.vertical-right-top:before{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-bottom:6px solid black;
+				border-left:6px solid transparent;
+				top:-6px;
+				z-index:10;
+			}
+			div.clock>div>span.vertical-left-bottom{
+				
+			}
+			div.clock>div>span.vertical-left-bottom:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				border-right:6px solid transparent;
+				bottom:-6px;
+				z-index:10;
+			}
+			div.clock>div>span.vertical-right-bottom{
+				
+			}
+			div.clock>div>span.vertical-right-bottom:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				border-left:6px solid transparent;
+				bottom:-6px;
+				z-index:10;
+			}
+			div.clock>div>span.vertical-left-both{
+				
+			}
+			div.clock>div>span.vertical-left-both:before{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-bottom:6px solid black;
+				border-right:6px solid transparent;
+				top:-6px;
+				z-index:10;
+			}
+			div.clock>div>span.vertical-left-both:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				border-right:6px solid transparent;
+				bottom:-6px;
+				z-index:10;
+			}
+			div.clock>div>span.vertical-right-both{
+				
+			}
+			div.clock>div>span.vertical-right-both:before{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-bottom:6px solid black;
+				border-left:6px solid transparent;
+				top:-6px;
+				z-index:10;
+			}
+			div.clock>div>span.vertical-right-both:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				border-left:6px solid transparent;
+				bottom:-6px;
+				z-index:10;
+			}
+			div.clock>div>span.vertical-all{
+				
+			}
+			div.clock>div>span.vertical-all:before{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-bottom:6px solid black;
+				border-left:3px solid transparent;
+				border-right:3px solid transparent;
+				top:-6px;
+				z-index:10;
+			}
+			div.clock>div>span.vertical-all:after{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:6px solid black;
+				border-left:3px solid transparent;
+				border-right:3px solid transparent;
+				bottom:-6px;
+				z-index:10;
+			}
+			
+			/* specific setting */
+			/* number zero */
+			div.clock>div.zero>span.n01{
+				left:9px;
+				top:0px;
+			}
+			div.clock>div.zero>span.n02{
+				left:0px;
+				top:7px;
+			}
+			div.clock>div.zero>span.n03{
+				right:0px;
+				top:8px;
+			}
+			div.clock>div.zero>span.n04{
+				left:0px;
+				top:50px;
+			}
+			div.clock>div.zero>span.n05{
+				right:0px;
+				top:50px;
+			}
+			div.clock>div.zero>span.n06{
+				left:9px;
+				top:82px;
+			}
+			
+			/* number one */
+			div.clock>div.one>span.n01{
+				top:8px;
+				left:24px;
+			}
+			div.clock>div.one>span.n02{
+				top:52px;
+				left:24px;
+			}
+			
+			/* number two */
+			div.clock>div.two>span.n01{
+				top:0px;
+				right:10px;
+			}
+			div.clock>div.two>span.n02{
+				top:8px;
+				right:0px;
+			}
+			div.clock>div.two>span.n03{
+				left:9px;
+				top:42px;
+			}
+			div.clock>div.two>span.n04{
+				left:1px;
+				top:50px;
+			}
+			div.clock>div.two>span.n05{
+				left:9px;
+				top:84px;
+			}
+			
+			
+			/* number three */
+			div.clock>div.three>span.n01{
+				top:0px;
+				right:10px;
+			}
+			div.clock>div.three>span.n02{
+				top:8px;
+				right:0px;
+			}
+			div.clock>div.three>span.n03{
+				left:9px;
+				top:42px;
+			}
+			div.clock>div.three>span.n04{
+				right:1px;
+				top:50px;
+			}
+			div.clock>div.three>span.n05{
+				left:9px;
+				top:84px;
+			}
+			
+			/* number four */
+			div.clock>div.four>span.n01{
+				left:9px;
+				top:0px;
+			}
+			div.clock>div.four>span.n02{
+				left:0px;
+				top:8px;
+			}
+			div.clock>div.four>span.n03{
+				left:9px;
+				top:42px;
+			}
+			div.clock>div.four>span.n04{
+				right:0px;
+				top:8px;
+			}
+			div.clock>div.four>span.n05{
+				left:0px;
+				top:50px;
+			}
+			div.clock>div.four>span.n06{
+				right:0px;
+				top:50px;
+			}
+			div.clock>div.four>span.n07{
+				left:9px;
+				top:82px;
+			}
+			
+			/* number five */
+			div.clock>div.five>span.n01{
+				top:0px;
+				right:10px;
+			}
+			div.clock>div.five>span.n02{
+				top:8px;
+				left:0px;
+			}
+			div.clock>div.five>span.n03{
+				left:9px;
+				top:42px;
+			}
+			div.clock>div.five>span.n04{
+				right:1px;
+				top:50px;
+			}
+			div.clock>div.five>span.n05{
+				left:9px;
+				top:84px;
+			}
+			
+			/* number six */
+			div.clock>div.six>span.n01{
+				top:0px;
+				right:10px;
+			}
+			div.clock>div.six>span.n02{
+				top:8px;
+				left:0px;
+			}
+			div.clock>div.six>span.n03{
+				left:9px;
+				top:42px;
+			}
+			div.clock>div.six>span.n04{
+				left:1px;
+				top:50px;
+			}
+			div.clock>div.six>span.n05{
+				right:1px;
+				top:50px;
+			}
+			div.clock>div.six>span.n06{
+				left:9px;
+				top:84px;
+			}
+			
+			/* number seven */
+			div.clock>div.seven>span.n01{
+				top:0px;
+				right:9px;
+			}
+			div.clock>div.seven>span.n02{
+				top:9px;
+				right:0px;
+			}
+			div.clock>div.seven>span.n03{
+				right:0px;
+				top:52px;
+			}
+			
+			/* number eight */
+			div.clock>div.eight>span.n01{
+				left:9px;
+				top:0px;
+			}
+			div.clock>div.eight>span.n02{
+				left:0px;
+				top:8px;
+			}
+			div.clock>div.eight>span.n03{
+				left:9px;
+				top:42px;
+			}
+			div.clock>div.eight>span.n04{
+				right:0px;
+				top:8px;
+			}
+			div.clock>div.eight>span.n05{
+				left:0px;
+				top:50px;
+			}
+			div.clock>div.eight>span.n06{
+				right:0px;
+				top:50px;
+			}
+			div.clock>div.eight>span.n07{
+				left:9px;
+				top:82px;
+			}
+			
+			
+			/* number nine */
+			div.clock>div.nine>span.n01{
+				left:9px;
+				top:0px;
+			}
+			div.clock>div.nine>span.n02{
+				left:0px;
+				top:8px;
+			}
+			div.clock>div.nine>span.n03{
+				left:9px;
+				top:42px;
+			}
+			div.clock>div.nine>span.n04{
+				right:0px;
+				top:8px;
+			}
+			div.clock>div.nine>span.n05{
+				right:0px;
+				top:50px;
+			}
+			div.clock>div.nine>span.n06{
+				left:9px;
+				top:82px;
+			}
+			
+			div.clock>div.separator{
+				width:24px;
+			}
+			div.clock>div.separator>span{
+				background-color:transparent;
+				display:inline-block;
+				width:24px;
+				height:90px;
+				line-height:90px;
+				vertical-align:middle;
+				text-align:center;
+				font-size:50px;
+				z-index:100;
+				color:black;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var clock=document.getElementById("clock");
+				
+				var zero=document.getElementsByClassName("zero")[0];
+				var one=document.getElementsByClassName("one")[0];
+				var two=document.getElementsByClassName("two")[0];
+				var three=document.getElementsByClassName("three")[0];
+				var four=document.getElementsByClassName("four")[0];
+				var five=document.getElementsByClassName("five")[0];
+				var six=document.getElementsByClassName("six")[0];
+				var seven=document.getElementsByClassName("seven")[0];
+				var eight=document.getElementsByClassName("eight")[0];
+				var nine=document.getElementsByClassName("nine")[0];
+				var first_comma=document.getElementsByClassName("first-comma")[0];
+				var second_comma=document.getElementsByClassName("second-comma")[0];
+				var nums=new Array(zero,one,two,three,four,five,six,seven,eight,nine);
+				
+				//set clock
+				
+				function setClock(){
+					clock.innerHTML="";
+					var now=new Date();
+					var hours=formatNumber(now.getHours());
+					var minutes=formatNumber(now.getMinutes());
+					var seconds=formatNumber(now.getSeconds());
+					
+					var time_to_show=new Array();
+					time_to_show.push(parseInt(hours.split("")[0]));
+					time_to_show.push(parseInt(hours.split("")[1]));
+					time_to_show.push(parseInt(minutes.split("")[0]));
+					time_to_show.push(parseInt(minutes.split("")[1]));
+					time_to_show.push(parseInt(seconds.split("")[0]));
+					time_to_show.push(parseInt(seconds.split("")[1]));
+					var l=time_to_show.length;
+					console.log(l);
+					for(var i=0;i<l;i++){
+						var temp=nums[time_to_show[i]].cloneNode(true);
+						clock.appendChild(temp);
+						if(i==1){
+							clock.appendChild(first_comma);
+						}
+						if(i==3){
+							clock.appendChild(second_comma)
+						}
+					}
+					
+									
+					console.log(hours,minutes,seconds);
+				}
+				setClock();
+			
+				setInterval(function(){
+					setClock();
+				},1000);
+				
+				
+			}
+			
+			function formatNumber(num){
+				if(num<10){
+					return "0"+num;
+				}else{
+					return num+"";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="clock-container">
+			<div id="clock" class="clock">
+				
+			</div>
+			<div style="display:none;">
+				<div class="separator first-comma">
+					<span>:</span>
+				</div>
+				<div class="separator second-comma">
+					<span>:</span>
+				</div>
+			</div>
+			<div class="clcok" style="display:none;">
+				<div class="zero">
+					<span class="horizontal horizontal-top-both n01"></span>
+					<span class="vertical vertical-left-both n02"></span>
+					<span class="vertical vertical-right-both n03"></span>
+					<span class="vertical vertical-left-both n04"></span>
+					<span class="vertical vertical-right-both n05"></span>
+					<span class="horizontal horizontal-bottom-both n06"></span>
+				</div>
+				<div class="one">
+					<span class="vertical vertical-all n01"></span>
+					<span class="vertical vertical-all n02"></span>
+				</div>
+				<div class="two">
+					<span class="horizontal horizontal-all n01"></span>
+					<span class="vertical vertical-right-both n02"></span>
+					<span class="horizontal horizontal-all n03"></span>
+					<span class="vertical vertical-left-both n04"></span>
+					<span class="horizontal horizontal-all n05"></span>
+				</div>
+				<div class="three">
+					<span class="horizontal horizontal-all n01"></span>
+					<span class="vertical vertical-right-both n02"></span>
+					<span class="horizontal horizontal-all n03"></span>
+					<span class="vertical vertical-right-both n04"></span>
+					<span class="horizontal horizontal-all n05"></span>
+				</div>
+				<div class="four">
+					<span class="vertical vertical-left-both n02"></span>
+					<span class="horizontal horizontal-all n03"></span>
+					<span class="vertical vertical-right-both n04"></span>
+					<span class="vertical vertical-right-both n06"></span>
+				</div>
+				<div class="five">
+					<span class="horizontal horizontal-all n01"></span>
+					<span class="vertical vertical-left-both n02"></span>
+					<span class="horizontal horizontal-all n03"></span>
+					<span class="vertical vertical-right-both n04"></span>
+					<span class="horizontal horizontal-all n05"></span>
+				</div>
+				<div class="six">
+					<span class="horizontal horizontal-all n01"></span>
+					<span class="vertical vertical-left-both n02"></span>
+					<span class="horizontal horizontal-all n03"></span>
+					<span class="vertical vertical-left-both n04"></span>
+					<span class="vertical vertical-right-both n05"></span>
+					<span class="horizontal horizontal-all n06"></span>
+				</div>
+				<div class="seven">
+					<span class="horizontal horizontal-all n01"></span>
+					<span class="vertical vertical-all n02"></span>
+					<span class="vertical vertical-all n03"></span>
+				</div>
+				<div class="eight">
+					<span class="horizontal horizontal-top-both n01"></span>
+					<span class="vertical vertical-left-both n02"></span>
+					<span class="horizontal horizontal-all n03"></span>
+					<span class="vertical vertical-right-both n04"></span>
+					<span class="vertical vertical-left-both n05"></span>
+					<span class="vertical vertical-right-both n06"></span>
+					<span class="horizontal horizontal-bottom-both n07"></span>
+				</div>
+				<div class="nine">
+					<span class="horizontal horizontal-top-both n01"></span>
+					<span class="vertical vertical-left-both n02"></span>
+					<span class="horizontal horizontal-all n03"></span>
+					<span class="vertical vertical-right-both n04"></span>
+					<span class="vertical vertical-right-both n05"></span>
+					<span class="horizontal horizontal-bottom-both n06"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
