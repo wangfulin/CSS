@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			html,body{
+				margin:0px;
+				padding:0px;
+				width:100%;
+				height:100%;
+			}
+			.left-panel{
+				width:500px;
+				height:100%;
+				-webkit-box-shadow:1px 0px 5px #ddd;
+				-moz-box-shadow:1px 0px 5px #ddd;
+				-ms-box-shadow:1px 0px 5px #ddd;
+				-o-box-shadow:1px 0px 5px #ddd;
+				box-shadow:1px 0px 5px #ddd;
+				overflow:hidden;
+				background-color:white;
+				position:absolute;
+				left:-470px;
+			}
+			.arrow{
+				position:absolute;
+				width:15px;
+				height:80px;
+				background-color:rgb(223,232,229);
+				right:0px;
+				top:50%;
+				margin-top:-40px;
+				cursor:pointer;
+			}
+			.arrow-close{
+				-webkit-transform:rotate(180deg);
+				-moz-transform:rotate(180deg);
+				-ms-transform:rotate(180deg);
+				-o-transform:rotate(180deg);
+				transform:rotate(180deg);
+			}
+			.arrow:hover{
+				background-color:rgb(157,214,197);
+			}
+			.arrow:before{
+				content:"";
+				width:0px;
+				height:0px;
+				border-bottom:10px solid black;
+				border-left:1px solid transparent;
+				border-right:1px solid transparent;
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+				position:absolute;
+				right:6px;
+				top:32px;
+			}
+			.arrow:after{
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:10px solid black;
+				border-left:1px solid transparent;
+				border-right:1px solid transparent;
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+				position:absolute;
+				right:6px;
+				top:38px;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var arrow=document.getElementById("arrow");
+				var left_panel=document.getElementById("leftPanel");
+				arrow.onclick=function(){
+					if(arrow.className=="arrow arrow-close"){
+						arrow.className="arrow";
+						leftPanel.style.left="-470px";
+					}else{
+						arrow.className="arrow arrow-close";
+						leftPanel.style.left="0px";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="leftPanel" class="left-panel">
+			<span id="arrow" class="arrow">
+				
+			</span>
+		</div>
+		<div class="content-container">
+			
+		</div>
+	</body>
+</html>
