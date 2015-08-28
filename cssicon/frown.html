@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.frown-icon{
+				width:25px;
+				height:25px;
+				border:3px solid blue;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				position:relative;
+			}
+			.frown-icon:before{
+				content:"";
+				width:4px;
+				height:4px;
+				background-color:blue;
+				-wekbit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				position:absolute;
+				left:5px;
+				top:5px;
+			}
+			.frown-icon:after{
+				content:"";
+				width:4px;
+				height:4px;
+				background-color:blue;
+				-wekbit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				position:absolute;
+				right:5px;
+				top:5px;
+			}
+			.type-icon{
+				width:13px;
+				height:8px;
+				background-color:white;
+				border-top:1px solid blue;
+				border-top-left-radius:50%;
+				border-top-right-radius:50%;
+				position:absolute;
+				left:6px;
+				top:16px;
+				z-index:-10;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="frown-icon">
+			<div class="type-icon">
+			
+			</div>
+		</div>
+	</body>
+</html>	

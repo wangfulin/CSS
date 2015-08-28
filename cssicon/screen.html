@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.screen-icon{
+				width:50px;
+				height:30px;
+				background-color:white;
+				border:1px solid lightblue;
+				border-bottom:10px solid lightblue;
+				-wekbit-borde-bottom-left-radius:5px;
+				-moz-border-bottom-left-radius:5px;
+				-ms-border-bottom-left-radius:5px;
+				-o-border-bottom-left-radius:5px;
+				border-bottom-left-radius:5px;
+				
+				-wekbit-borde-bottom-right-radius:5px;
+				-moz-border-bottom-right-radius:5px;
+				-ms-border-bottom-right-radius:5px;
+				-o-border-bottom-right-radius:5px;
+				border-bottom-right-radius:5px;
+				position:relative;
+			}
+			.screen-icon:before{
+				position:absolute;
+				content:"";
+				width:40px;
+				height:24px;
+				border:1px solid lightblue;
+				background-color:white;
+				top:2px;
+				left:4px;
+			}
+			.screen-icon:after{
+				content:"";
+				z-index:-1;
+				position:absolute;
+				width:0px;
+				height:0px;
+				border-bottom:20px solid lightblue;
+				border-left:5px solid transparent;
+				border-right:5px solid transparent;
+				bottom:-15px;
+				left:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="screen-icon">
+		
+		</div>
+	</body>
+</html>

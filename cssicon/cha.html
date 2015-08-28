@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.cha-icon{
+				width:40px;
+				height:40px;
+				background-color:white;
+				border:1px solid blue;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				position:relative;
+			}
+			.cha-icon:before{
+				content:"";
+				width:26px;
+				height:2px;
+				background-color:blue;
+				position:absolute;
+				left:7px;
+				top:19px;
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+			}
+			.cha-icon:after{
+				content:"";
+				width:26px;
+				height:2px;
+				background-color:blue;
+				position:absolute;
+				left:7px;
+				top:19px;
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cha-icon">
+		
+		</div>
+	</body>
+</html>	
