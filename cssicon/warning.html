@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.warning-square-icon{
+				width:60px;
+				height:60px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				border-radius:50%;
+				border:1px solid black;
+				background-color:white;
+				position:relative;
+			}
+			.warning-square-icon:before{
+				width:4px;
+				height:24px;
+				background-color:black;
+				content:"";
+				position:absolute;
+				top:12px;
+				left:25px;
+			}
+			.warning-square-icon:after{
+				width:4px;
+				height:4px;
+				background-color:black;
+				content:"";
+				position:absolute;
+				top:40px;
+				left:25px;
+			}
+			.warning-tri-icon{
+				width:0px;
+				height:0px;
+				border-bottom:60px solid blue;
+				border-left:30px solid  transparent;
+				border-right:30px solid  transparent;
+				position:relative;
+			}
+			.warning-tri-icon:before{
+				width:4px;
+				height:24px;
+				background-color:black;
+				content:"";
+				position:absolute;
+				top:16px;
+				left:-2px;
+			}
+			.warning-tri-icon:after{
+				width:4px;
+				height:4px;
+				background-color:black;
+				content:"";
+				position:absolute;
+				top:44px;
+				left:-2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warning-tri-icon">
+
+		</div>
+		<div class="warning-square-icon">
+
+		</div>
+	</body>
+</html>
