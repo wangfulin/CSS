@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.envelop-icon{
+				width:60px;
+				height:30px;
+				background-color:white;
+				border:4px solid black;
+				position:relative;
+			}
+			.envelop-icon:before{
+				width:36px;
+				height:4px;
+				content:"";
+				position:absolute;
+				top:6px;
+				left:-2px;
+				background:black;
+				-webkit-transform:rotate(30deg);
+				-moz-transform:rotate(30deg);
+				-ms-transform:rotate(30deg);
+				-o-transform:rotate(30deg);
+				transform:rotate(30deg);
+			}
+			.envelop-icon:after{
+				width:36px;
+				height:4px;
+				content:"";
+				position:absolute;
+				top:6px;
+				left:28px;
+				background-color:black;
+				-webkit-transform:rotate(-30deg);
+				-moz-transform:rotate(-30deg);
+				-ms-transform:rotate(-30deg);
+				-o-transform:rotate(-30deg);
+				transform:rotate(-30deg);
+			}
+		</style>
+	</head>
+	<body>	
+		<div class="envelop-icon">
+
+		</div>
+	</body>
+</html>
