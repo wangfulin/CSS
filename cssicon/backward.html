@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.backward-icon{
+				width:40px;
+				height:40px;
+				border-right:4px solid black;
+				border-top:4px solid black;
+				border-bottom:4px solid black;
+				border-left:4px solid transparent;
+				-wekbit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				position:relative;
+			}
+			.backward-icon:before{
+				content:"";
+				position:absolute;
+				width:0px;
+				border-top:10px solid black;
+				border-left:5px solid transparent;
+				border-right:5px solid transparent;
+				left:0px;
+				bottom:-2px;
+			}
+		</style>
+	</head>	
+	<body>
+		<div class="backward-icon">
+
+		</div>
+	</body>
+</html>

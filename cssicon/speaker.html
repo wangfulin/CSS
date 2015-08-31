@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.speaker-icon{
+				width:20px;
+				height:40px;
+				border:4px solid black;
+				position:relative;
+				-webkit-border-radius:15px;
+				-moz-border-radius:15px;
+				-ms-border-radius:15px;
+				-o-border-radius:15px;
+				border-radius:15px;
+			}
+			.speaker-icon:after{
+				content:"";
+				width:30px;
+				height:30px;
+				border-top:4px solid transparent;
+				border-left:4px solid transparent;
+				border-right:4px solid black;
+				border-bottom:4px solid black;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				-webkit-transform:rotate(40deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+				position:absolute;
+				bottom:-10px;
+				left:-9px;
+			}
+			.holder{
+				position:absolute;
+				width:4px;
+				height:18px;
+				background-color:black;
+				left:8px;
+				top:50px;
+			}
+			.holder:after{
+				content:"";
+				position:absolute;
+				width:20px;
+				height:4px;
+				background-color:black;
+				left:-8px;
+				bottom:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="speaker-icon">
+			<div class="holder">
+
+			</div>
+		</div>
+	</body>
+</html>

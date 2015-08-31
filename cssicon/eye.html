@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<meta charset="utf-8" />
+		<style>
+			.eye-icon{
+				width:40px;
+				height:20px;
+				border-top:4px solid black;
+				border-bottom:2px solid black;
+				border-left:3px solid black;
+				border-right:3px solid black;
+				position:relative;
+				border-radius:50%;
+			}
+			.eye-icon:after{
+				content:"";
+				position:absolute;
+				top:4px;
+				left:18px;
+				width:10px;
+				height:10px;
+				border-radius:50%;
+				background-color:black;
+			}
+			.eye-icon:before{
+				z-index:1;
+				content:"";
+				position:absolute;
+				top:7px;
+				left:22px;
+				width:4px;
+				height:4px;
+				border-radius:50%;
+				background-color:white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="eye-icon">
+
+		</div>
+	</body>
+</html>
