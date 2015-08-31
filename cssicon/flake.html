@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.flake-icon{
+				width:6px;
+				height:30px;
+				background-color:black;
+				position:relative;
+				margin-left:10px;
+			}
+			.flake-icon:before{
+				content:"";
+				position:absolute;
+				width:6px;
+				height:30px;
+				background-color:black;
+				-webkit-transform:rotate(60deg);
+				-moz-transform:rotate(60deg);
+				-ms-transform:rotate(60deg);
+				-o-transform:rotate(60deg);
+				transform:rotate(60deg);
+			}
+			.flake-icon:after{
+				content:"";
+				position:absolute;
+				width:6px;
+				height:30px;
+				-webkit-transform:rotate(-60deg);
+				-moz-transform:rotate(-60deg);
+				-ms-transform:rotate(-60deg);
+				-o-transform:rotate(-60deg);
+				transform:rotate(-60deg);
+				background-color:black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flake-icon">
+		
+		</div>
+	</body>
+</html>
