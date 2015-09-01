@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<meta charset="utf-8" />
+		<style>
+			.ring-icon{
+				position:relative;
+			}
+			.ring-icon:after,.ring-icon:before{
+				content:"";
+				width:10px;	
+				height:10px;
+				position:absolute;
+				border:1px solid black;
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+			}
+			.ring-icon:before{
+				-webkit-border-radius:6px 6px 6px 0px;
+				-moz-border-radius:6px 6px 6px 0px;
+				-ms-border-radius:6px 6px 6px 0px;
+				-o-border-radius:6px 6px 6px 0px;
+				border-radius:6px 6px 6px 0px;
+				left:25px;
+			}
+			.ring-icon:after{
+				-webkit-border-radius:6px 0px 6px 6px;
+				-moz-border-radius:6px 0px 6px 6px;
+				-ms-border-radius:6px 0px 6px 6px;
+				-o-border-radius:6px 0px 6px 6px;
+				border-radius:6px 0px 6px 6px;
+				left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ring-icon">
+
+		</div>
+	</body>	
+</html>
