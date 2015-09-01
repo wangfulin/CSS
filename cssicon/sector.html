@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.sector-icon{
+				width:0px;
+				height:0px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				border:20px solid black;
+				border-top:20px solid transparent;
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+				position:relative;
+			}
+			.sector-icon:after{
+				content:"";
+				position:absolute;
+				width:0px;
+				height:0px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				border:20px solid transparent;
+				border-top:20px solid black;
+				left:-20px;
+				top:-24px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sector-icon">
+		
+		</div>
+	</body>
+</html>
