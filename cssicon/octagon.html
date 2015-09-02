@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.octagon-icon{
+				width:100px;
+				height:40px;
+				position:relative;
+				background-color:black;
+				margin:50px;
+			}
+			.octagon-icon:before,.octagon-icon:after{
+				width:40px;
+				height:0px;
+				content:"";
+				position:absolute;
+				border-left:30px solid transparent;
+				border-right:30px solid transparent;
+				left:0px;
+			}
+			.octagon-icon:before{
+				top:-30px;
+				border-bottom:30px solid black;
+			}
+			.octagon-icon:after{
+				top:40px;
+				border-top:30px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="octagon-icon">
+		
+		</div>
+	</body>
+</html>
