@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.video-icon{
+				width:20px;
+				height:20px;
+				position:relative;
+				border:2px solid black;
+				margin:40px;
+			}
+			.video-icon:before{
+				width:3px;
+				height:3px;
+				background-color:black;
+				content:"";
+				position:absolute;
+				left:-7px;
+				top:50%;
+				margin-top:-1px;
+				-webkit-box-shadow:0px -8px 0px 0px black,31px -8px 0px 0px black,31px 0px 0px 0px black,0px 8px 0px 0px black,31px 8px 0px 0px black;
+				-moz-box-shadow:0px -8px 0px 0px black,31px -8px 0px 0px black,31px 0px 0px 0px black,0px 8px 0px 0px black,31px 8px 0px 0px black;
+				-ms-box-shadow:0px -8px 0px 0px black,31px -8px 0px 0px black,31px 0px 0px 0px black,0px 8px 0px 0px black,31px 8px 0px 0px black;
+				-o-box-shadow:0px -8px 0px 0px black,31px -8px 0px 0px black,31px 0px 0px 0px black,0px 8px 0px 0px black,31px 8px 0px 0px black;
+				box-shadow:0px -8px 0px 0px black,31px -8px 0px 0px black,31px 0px 0px 0px black,0px 8px 0px 0px black,31px 8px 0px 0px black;
+			}
+			.video-icon:after{
+				content:"";
+				position:absolute;
+				left:50%;
+				top:50%;
+				width:0px;
+				height:0px;
+				border-width:4px 0px 4px 6px;
+				border-style:solid;
+				border-color:transparent black transparent;
+				-webkit-transform:translate(-50%,-50%);
+				-moz-transform:translate(-50%,-50%);
+				-ms-transform:translate(-50%,-50%);
+				-o-transform:translate(-50%,-50%);
+				transform:translate(-50%,-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="video-icon">
+		
+		</div>
+	</body>
+</html>
