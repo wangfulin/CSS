@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.btn{
+				padding:0px 24px;
+				color:#333;
+				font:bold 24px Arial,Helvetica;
+				background-image:-moz-linear-gradient(center top,#EEE,#CCC);
+				background-image:-webkit-linear-gradient(center top,#eee,#ccc);
+				text-decoration:none;
+				border-radius:5px;
+				display:inline-block;
+				border:1px solid #777;
+				margin:20px;
+				white-wrap:nowrap;
+				background-color:#ddd;
+				-webkit-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+				-moz-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+				-ms-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+				-o-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+				text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+				-webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.8) inset, 0px 1px 0px rgba(0, 0, 0, 0.3);
+				-moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.8) inset, 0px 1px 0px rgba(0, 0, 0, 0.3);
+				-ms-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.8) inset, 0px 1px 0px rgba(0, 0, 0, 0.3);
+				-o-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.8) inset, 0px 1px 0px rgba(0, 0, 0, 0.3);
+				box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.8) inset, 0px 1px 0px rgba(0, 0, 0, 0.3);
+			}
+			.btn::before{
+				float:left;
+				width:24px;
+				margin:0px 25px 0px -24px;
+				font-size:24px;
+				padding:0px 10px;
+				border-radius:5px 0px 0px 5px;
+				background:rgba(0,0,0,0.1) none repeat scroll 0% 0%;
+				-webkit-box-shadow:1px 0px 0px rgba(0,0,0,0.5),2px 0px 0px rgba(255,255,255,0.5);
+				-moz-box-shadow:1px 0px 0px rgba(0,0,0,0.5),2px 0px 0px rgba(255,255,255,0.5);
+				-ms-box-shadow:1px 0px 0px rgba(0,0,0,0.5),2px 0px 0px rgba(255,255,255,0.5);
+				-o-ox-shadow:1px 0px 0px rgba(0,0,0,0.5),2px 0px 0px rgba(255,255,255,0.5);
+				box-shadow:1px 0px 0px rgba(0,0,0,0.5),2px 0px 0px rgba(255,255,255,0.5);
+			}
+			.btn-add::before{
+				content:"\271A";
+			}
+			.btn-edit::before{
+				content:"\270E";				
+			}
+			.btn-delete::before{
+				content:"\2718";			
+			}
+			.btn-save::before{
+				content:"\2714";			
+			}
+			.btn-send::before{
+				content:"\2709";				
+			}
+			.btn-like::before{
+				content:"\2764";			
+			}
+			.btn-next::before{
+				content:"\279C";			
+			}
+			.btn-fav::before{
+				content:"\2605";			
+			}
+			.btn-spark::before{
+				content:"\2737";			
+			}
+			.btn-play::before{
+				content:"\25B6";			
+			}
+			.btn-follow{
+				font-family:verdana;
+				color:white;
+				background:rgba(0,0,0,0.1) none repeat scroll 0% 0%;
+				text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+				background-color:#88e1e6;
+			}
+			.btn-follow::before{
+				content:"t";
+				text-align:center;
+			}
+			.btn-fan{
+				font-family:verdana;
+				color:white;
+				background:rgba(0,0,0,0.1) none repeat scroll 0% 0%;
+				text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+				background-color:#879BC3;
+			}
+			.btn-fan::before{
+				content:"f";
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<a class="btn btn-add" href="#">Add</a>
+		<a class="btn btn-edit" href="#">Edit</a>
+		<a class="btn btn-delete" href="#">Delete</a>
+		<a class="btn btn-save" href="#">Save</a>
+		<a class="btn btn-send" href="#">Send email</a>
+		<a class="btn btn-like" href="#">Like</a>
+		<a class="btn btn-next" href="#">Next</a>
+		<a class="btn btn-fav" href="#">Favourite</a>
+		<a class="btn btn-spark" href="#">Spark</a>
+		<a class="btn btn-play" href="#">Play</a>
+		<a class="btn btn-follow" href="#">Follow me</a>
+		<a class="btn btn-fan" href="#">Become a fan</a>
+	</body>
+</html>
