@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Candal);
+			@font-face{
+				font-family:"saucer";
+				src:url("fonts/SaucerBB.ttf") format("truetype");
+			}
+			p.cursive-font{
+				font-family:"cursive";
+			}
+			p.lobster-font{
+				font-family:"lobster",cursive;
+			}
+			p.candal-font{
+				font-family:"candal",cursive;
+			}
+			p.shadow-font{
+				font-family:"Shadows Into Light","cursive"
+			}
+			p.saucer-font{
+				font-family:"Saucer","cursive";
+			}
+			p.peas-font{
+				font-family:"Peas & Carrots";
+			}
+		</style>
+		<script type="text/javascript">
+			  WebFontConfig = {
+				google: { families: [ 'Shadows+Into+Light::latin' ] }
+			  };
+			  (function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			  })(); 
+		</script>
+	</head>
+	<body>
+		<p class="cursive-font">
+			This font family is cursive.
+		</p>
+		<p class="lobster-font">
+			This font family is lobster.
+		</p>
+		<p class="candal-font">
+			This font family is candal.
+		</p>
+		<p class="shadow-font">
+			This font family is Shadows Inot Light.
+		</p>
+		<p class="saucer-font">
+			This font family is Saucer.
+		</p>
+		<p class="peas-font">
+			This font family is Just Peas & Carrots.
+		</p>
+	</body>
+</html>
