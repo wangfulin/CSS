@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			html,body{
+				font-family:tahoma,arial,simsun;
+				margin:0px;
+				padding:0px;
+			}
+			.container{
+				width:1200px;
+				margin:auto;
+			}
+			.nav{
+				width:100%;
+				height:46px;
+				border:1px solid grey;
+				-webkit-border-radius:5px;
+				-moz-border-radius:5px;
+				-ms-border-radius:5px;
+				-o-border-radius:5px;
+				border-radius:5px;
+				margin:10px 0px;
+				background-color:rgb(43,45,51);
+			}
+			.nav>ul{
+				list-style:none;
+				margin:0px;
+			}
+			.nav>ul>li{
+				float:left;
+				margin:0px;
+			}
+			.nav>ul>li>a{
+				font-size:16px;
+				text-decoration:none;
+				display:inline-block;
+				height:46px;
+				padding-left:40px;
+				padding-right:40px;
+				line-height:46px;
+				vertical-align:middle;
+				color:rgba(255,255,255,0.498039);
+				-webkit-box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-ms-box-sizing:border-box;
+				-o-box-sizing:border-box;
+				box-sizing:border-box;
+				background-color:rgb(43,45,51);
+			}
+			.nav>ul>li>a:hover{
+				color:white;
+			}
+			.nav2>ul>li>a{
+				-webkit-transition:all .5s linear;
+				-moz-transition:all .5s linear;
+				-ms-transition:all .5s linear;
+				-o-transition:all .5s linear;
+				transition:all .5s linear;
+			}
+			.nav3>ul>li>a:hover{
+				border-bottom:4px solid rgb(64,144,255);
+			}
+			.nav4>ul>li>a:hover{
+				background-color:rgba(255,255,255,0.198039);
+			}
+			.nav5>ul>li>a:hover{
+				background-color:rgba(255,255,255,0.198039);
+				-webkit-border-radius:10px;
+				-moz-border-radius:10px;
+				-ms-border-radius:10px;
+				-o-border-radius:10px;
+				border-radius:10px;
+			}
+			.nav6>ul>li>a:hover{
+				background-color:rgba(255,255,255,0.198039);
+				-webkit-transform:skew(15deg);
+				-moz-transform:skew(15deg);
+				-ms-transform:skew(15deg);
+				-o-transform:skew(15deg);
+				transform:skew(15deg);
+			}
+			.nav7>ul>li{
+				position:relative;
+			}
+			.nav7>ul>li>a:hover{
+				background-color:rgba(255,255,255,0.198039);
+			}
+			.nav7>ul>li>a:hover+i{
+				position:absolute;
+				width:0px;
+				height:0px;
+				left:50%;
+				margin-left:-20px;
+				bottom:-16px;
+				border-top:16px solid rgb(85,86,91);
+				border-left:12px solid transparent;
+				border-right:12px solid transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="nav nav1">
+				<ul>
+					<li><a href="#">tab1</a></li>
+					<li><a href="#">tab2</a></li>
+					<li><a href="#">tab3</a></li>
+					<li><a href="#">tab4</a></li>
+					<li><a href="#">tab5</a></li>
+					<li><a href="#">tab6</a></li>
+					<li><a href="#">tab7</a></li>
+				</ul>
+			</div>
+			<div class="nav nav2">
+				<ul>
+					<li><a href="#">tab1</a></li>
+					<li><a href="#">tab2</a></li>
+					<li><a href="#">tab3</a></li>
+					<li><a href="#">tab4</a></li>
+					<li><a href="#">tab5</a></li>
+					<li><a href="#">tab6</a></li>
+					<li><a href="#">tab7</a></li>
+				</ul>
+			</div>
+			<div class="nav nav3">
+				<ul>
+					<li><a href="#">tab1</a></li>
+					<li><a href="#">tab2</a></li>
+					<li><a href="#">tab3</a></li>
+					<li><a href="#">tab4</a></li>
+					<li><a href="#">tab5</a></li>
+					<li><a href="#">tab6</a></li>
+					<li><a href="#">tab7</a></li>
+				</ul>
+			</div>
+			<div class="nav nav4">
+				<ul>
+					<li><a href="#">tab1</a></li>
+					<li><a href="#">tab2</a></li>
+					<li><a href="#">tab3</a></li>
+					<li><a href="#">tab4</a></li>
+					<li><a href="#">tab5</a></li>
+					<li><a href="#">tab6</a></li>
+					<li><a href="#">tab7</a></li>
+				</ul>
+			</div>
+			<div class="nav nav5">
+				<ul>
+					<li><a href="#">tab1</a></li>
+					<li><a href="#">tab2</a></li>
+					<li><a href="#">tab3</a></li>
+					<li><a href="#">tab4</a></li>
+					<li><a href="#">tab5</a></li>
+					<li><a href="#">tab6</a></li>
+					<li><a href="#">tab7</a></li>
+				</ul>
+			</div>
+			<div class="nav nav6">
+				<ul>
+					<li><a href="#">tab1</a></li>
+					<li><a href="#">tab2</a></li>
+					<li><a href="#">tab3</a></li>
+					<li><a href="#">tab4</a></li>
+					<li><a href="#">tab5</a></li>
+					<li><a href="#">tab6</a></li>
+					<li><a href="#">tab7</a></li>
+				</ul>
+			</div>
+			<div class="nav nav7">
+				<ul>
+					<li><a href="#">tab1</a><i></i></li>
+					<li><a href="#">tab2</a><i></i></li>
+					<li><a href="#">tab3</a><i></i></li>
+					<li><a href="#">tab4</a><i></i></li>
+					<li><a href="#">tab5</a><i></i></li>
+					<li><a href="#">tab6</a><i></i></li>
+					<li><a href="#">tab7</a><i></i></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
