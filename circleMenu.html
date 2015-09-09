@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.container{
+				width:100%;
+				height:600px;
+			}
+			.menu-container{
+				width:600px;
+				height:100%;
+				margin:auto;
+				text-align:center;
+				border:1px solid red;
+				position:relative;
+			}
+			.btn{
+				display:inline-block;
+				text-align:center;
+				width:160px;
+				height:160px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				border:1px solid black;
+				background-color:white;
+				color:black;
+				font-size:32px;
+				-webkit-transition:all .5s linear;
+				-moz-transition:all .5s linear;
+				-ms-transition:all .5s linear;
+				-o-transition:all .5s linear;
+				transition:all .5s linear;
+				text-decoration:none;
+				line-height:160px;
+				vertical-align:middle;
+				margin-top:220px;
+			}
+			.btn-clicked{
+				background-color:black;
+				color:white;
+			}
+			.item{
+				position:absolute;
+				background-color:red;
+				color:white;
+				width:100px;
+				height:100px;
+				top:500px;
+				left:250px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				font-size:22px;
+				line-height:100px;
+				text-align:center;
+				vertical-align:middle;
+				-webkit-transition:all 1s linear;
+				-moz-transition:all 1s linear;
+				-ms-transition:all 1s linear;
+				-o-transition:all 1s linear;
+				transition:all 1s linear;
+				display:none;
+			}
+			#item1{
+				background-color:red;
+			}
+			#item2{
+				background-color:orange;
+			}
+			#item3{
+				background-color:yellow;
+			}
+			#item4{
+				background-color:green;
+			}
+			#item5{
+				background-color:blue;
+			}
+			#item6{
+				background-color:violet;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				var clicked=false;
+				btn.onclick=function(){
+					if(!clicked){
+						btn.className="btn btn-clicked";
+						letItGo();
+						clicked=!clicked;
+					}else{
+						btn.className="btn";
+						//var items=document.getElementsByClassName("item");
+						//items.style.left="250px";
+						//items.style.top="500px";
+						clicked=!clicked;
+					}
+				}
+			
+				function Circle(x,y,selfRadius,circleRadius,startDeg,endDeg,speed){
+					this.x=x;
+					this.y=y;
+					this.selfRadius=selfRadius;
+					this.circleRadius=circleRadius;
+					this.speed=speed;
+					this.startDeg=startDeg;
+					this.endDeg=endDeg;
+					this.currDeg=startDeg;
+				}
+				
+				Circle.prototype.getCurrentPos=function(){
+					var pos=new Array();
+					var posX;
+					var posY;
+					this.currDeg=this.currDeg-this.speed;
+					if(this.endDeg<this.currDeg){
+						posX=this.x+this.circleRadius*Math.cos(this.currDeg)-this.selfRadius;
+						posY=this.y-this.circleRadius*Math.sin(this.currDeg)-this.selfRadius;
+					}else{
+						this.currDeg=this.endDeg;
+						posX=this.x+this.circleRadius*Math.cos(this.currDeg)-this.selfRadius;
+						posY=this.y-this.circleRadius*Math.sin(this.currDeg)-this.selfRadius;
+					}
+					
+					pos.push(posX);
+					pos.push(posY);
+					return pos;
+				}
+				
+				function letItGo(){
+					var cs=new Array();
+					cs[0]=new Circle(300,300,50,250,-Math.PI/2,-Math.PI*5/6,Math.PI/100);
+					cs[1]=new Circle(300,300,50,250,-Math.PI/2,-Math.PI*7/6,Math.PI/100);
+					cs[2]=new Circle(300,300,50,250,-Math.PI/2,-Math.PI*3/2,Math.PI/100);
+					cs[3]=new Circle(300,300,50,250,-Math.PI/2,-Math.PI*11/6,Math.PI/100);
+					cs[4]=new Circle(300,300,50,250,-Math.PI/2,-Math.PI*13/6,Math.PI/100);
+					cs[5]=new Circle(300,300,50,250,-Math.PI/2,-Math.PI*5/2,Math.PI/100);
+					console.log(cs[0]);
+					
+					var items=new Array();
+					items[0]=document.getElementById("item1");
+					items[1]=document.getElementById("item2");
+					items[2]=document.getElementById("item3");
+					items[3]=document.getElementById("item4");
+					items[4]=document.getElementById("item5");
+					items[5]=document.getElementById("item6");
+					
+					var eveId=new Array();
+					for(var i=0;i<=5;i++){
+						(function(i){
+							items[i].style.display="block";
+							eveId[i]=setInterval(function(){
+								var pos=cs[i].getCurrentPos();
+								if(Math.floor(pos[0])===parseInt(items[i].style.left)&&pos[1]===parseInt(items[i].style.top)){
+									clearInterval(eveId[i]);
+								}else{
+									items[i].style.left=pos[0]+"px";
+									items[i].style.top=pos[1]+"px";
+								}
+								//sleep(200);
+							},40);
+						})(i);
+					}
+				}		
+
+				//letItGo();
+				
+				function sleep(seconds){
+					var t=new Date().getTime();
+					while(new Date().getTime()-t<seconds){
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="menu-container">
+				<a id="btn" class="btn" href="#">Start</a>
+				<ul>
+					<li id="item1" class="item">Red</li>
+					<li id="item2" class="item">orange</li>
+					<li id="item3" class="item">yellow</li>
+					<li id="item4" class="item">green</li>
+					<li id="item5" class="item">blue</li>
+					<li id="item6" class="item">violet</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
