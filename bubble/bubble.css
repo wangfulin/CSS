@@ -1,0 +1,125 @@
+html,body{
+	margin:0px;
+	padding:0px;
+}
+
+.wrapper{
+	position:relative;
+
+	width:300px;
+	height:100px;
+}
+
+.bubble{
+	position:absolute;
+
+	width:200px;
+	height:50px;
+
+	border:1px solid violet;
+	background-color:violet;
+
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+
+	margin-top:50px;
+	margin-left:50px;
+}
+.bubble::before{
+	position:absolute;
+
+	width:0px;
+	height:0px;
+
+	content:"";
+}
+
+.bubble::after{
+	position:absolute;
+
+	width:0px;
+	height:0px;
+
+	content:"";
+}
+
+.top::before{
+	bottom:50px;
+	left:85px;
+
+	border:30px solid violet;
+	border-left:15px solid transparent;
+	border-right:15px solid transparent;
+	border-top:15px solid transparent;
+}
+
+.bottom::before{
+	bottom:-45px;
+	left:85px;
+
+	border:30px solid violet;
+	border-left:15px solid transparent;
+	border-right:15px solid transparent;
+	border-bottom:15px solid transparent;
+}
+
+.left::before{
+	left:-45px;
+	bottom:10px;
+
+	border:30px solid violet;
+	border-left:15px solid transparent;
+	border-bottom:15px solid transparent;
+	border-top:15px solid transparent;
+}
+
+.right::after{
+	right:-45px;
+	bottom:10px;
+
+	border:30px solid violet;
+	border-right:15px solid transparent;
+	border-bottom:15px solid transparent;
+	border-top:15px solid transparent;
+
+}
+
+.topLeft::before{
+	left:-20px;
+	bottom:25px;
+
+	border:10px solid violet;
+	border-left:10px solid transparent;
+	border-bottom:10px solid transparent;
+}
+
+.bottomLeft::before{
+	left:-20px;
+	bottom:10px;
+
+	border:10px solid violet;
+	border-left:10px solid transparent;
+	border-top:10px solid transparent;
+}
+
+.topRight::after{
+	right:-20px;
+	bottom:25px;
+
+	border:10px solid violet;
+	border-right:10px solid transparent;
+	border-bottom:10px solid transparent;
+}
+
+.bottomRight::after{
+	right:-20px;
+	bottom:10px;
+
+	border:10px solid violet;
+	border-right:10px solid transparent;
+	border-top:10px solid transparent;
+}
+
