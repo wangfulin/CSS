@@ -48,6 +48,8 @@
 				box-sizing:border-box;
 				color:rgba(255,255,255,0.498039);
 				background-color:rgb(43,45,51);
+				position:relative;
+				overflow:visible;
 			}
 			.nav>ul>li>a:hover{
 				color:white;
@@ -126,6 +128,28 @@
 				-ms-box-shadow:-1px 0px 0px 1px rgba(255,255,255,0.198039) inset,1px 0px 0px 1px rgba(255,255,255,0.198039) inset,0px 1px 0px 1px rgba(255,255,255,0.198039) inset;
 				-o-box-shadow:-1px 0px 0px 1px rgba(255,255,255,0.198039) inset,1px 0px 0px 1px rgba(255,255,255,0.198039) inset,0px 1px 0px 1px rgba(255,255,255,0.198039) inset;
 				box-shadow:-1px 0px 0px 1px rgba(255,255,255,0.198039) inset,1px 0px 0px 1px rgba(255,255,255,0.198039) inset,0px 1px 0px 1px rgba(255,255,255,0.198039) inset;
+			}
+			.nav11>ul>li>i{
+				width:10px;
+				height:4px;
+				display:inline-block;
+				vertical-align:middle;
+				background-color:rgba(255,255,255,0.198039);
+				position:relative;
+				left:-100px;
+				visibility:hidden;
+			}
+			.nav11>ul>li>i:after{
+				content:"";
+				position:absolute;
+				border-left:8px solid rgba(255,255,255,0.198039);
+				border-top:8px solid transparent;
+				border-bottom:8px solid transparent;
+				right:-8px;
+				top:-6px;
+			}
+			.nav11>ul>li>a:hover+i{
+				visibility:visible;
 			}
 		</style>
 	</head>
@@ -239,6 +263,17 @@
 					<li><a href="#">tab5</a></li>
 					<li><a href="#">tab6</a></li>
 					<li><a href="#">tab7</a></li>
+				</ul>
+			</div>
+			<div class="nav nav11">
+				<ul>
+					<li><a href="#">tab1</a><i></i></li>
+					<li><a href="#">tab2</a><i></i></li>
+					<li><a href="#">tab3</a><i></i></li>
+					<li><a href="#">tab4</a><i></i></li>
+					<li><a href="#">tab5</a><i></i></li>
+					<li><a href="#">tab6</a><i></i></li>
+					<li><a href="#">tab7</a><i></i></li>
 				</ul>
 			</div>
 		</div>
