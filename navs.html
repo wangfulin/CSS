@@ -29,7 +29,7 @@
 				margin:0px;
 			}
 			.nav>ul>li{
-				float:left;
+				display:inline-block;
 				margin:0px;
 			}
 			.nav>ul>li>a{
@@ -41,12 +41,12 @@
 				padding-right:40px;
 				line-height:46px;
 				vertical-align:middle;
-				color:rgba(255,255,255,0.498039);
 				-webkit-box-sizing:border-box;
 				-moz-box-sizing:border-box;
 				-ms-box-sizing:border-box;
 				-o-box-sizing:border-box;
 				box-sizing:border-box;
+				color:rgba(255,255,255,0.498039);
 				background-color:rgb(43,45,51);
 			}
 			.nav>ul>li>a:hover{
@@ -106,8 +106,26 @@
 				box-shadow:-1px 0px 0px 1px rgba(255,255,255,0.198039) inset,1px 0px 0px 1px rgba(255,255,255,0.198039) inset,0px 1px 0px 1px rgba(255,255,255,0.198039) inset,0px -1px 0px 1px rgba(255,255,255,0.198039) inset;
 			}
 			.nav9>ul>li>a:hover{
-				-webkit-box-shadow:-1px 0px 1px rgba(255,255,255,0.198039),1px 0px 0px 1px rgba(255,255,255,0.198039),0px 1px 1px rgba(255,255,255,0.198039),0px -1px 1px rgba(255,255,255,0.198039);
-
+				outline:1px solid rgb(85,86,91);
+			}
+			.nav10>ul>li>a:hover{
+				-webkit-border-top-left-radius:8px;
+				-moz-border-top-left-radius:8px;
+				-ms-border-top-left-radius:8px;
+				-o-border-top-left-radius:8px;
+				border-top-left-radius:8px;
+				
+				-webkit-border-top-right-radius:8px;
+				-ms-border-top-right-radius:8px;
+				-o-border-top-right-radius:8px;
+				-ms-border-top-right-radius:8px;
+				border-top-right-radius:8px;
+				
+				-webkit-box-shadow:-1px 0px 0px 1px rgba(255,255,255,0.198039) inset,1px 0px 0px 1px rgba(255,255,255,0.198039) inset,0px 1px 0px 1px rgba(255,255,255,0.198039) inset;
+				-moz-box-shadow:-1px 0px 0px 1px rgba(255,255,255,0.198039) inset,1px 0px 0px 1px rgba(255,255,255,0.198039) inset,0px 1px 0px 1px rgba(255,255,255,0.198039) inset;
+				-ms-box-shadow:-1px 0px 0px 1px rgba(255,255,255,0.198039) inset,1px 0px 0px 1px rgba(255,255,255,0.198039) inset,0px 1px 0px 1px rgba(255,255,255,0.198039) inset;
+				-o-box-shadow:-1px 0px 0px 1px rgba(255,255,255,0.198039) inset,1px 0px 0px 1px rgba(255,255,255,0.198039) inset,0px 1px 0px 1px rgba(255,255,255,0.198039) inset;
+				box-shadow:-1px 0px 0px 1px rgba(255,255,255,0.198039) inset,1px 0px 0px 1px rgba(255,255,255,0.198039) inset,0px 1px 0px 1px rgba(255,255,255,0.198039) inset;
 			}
 		</style>
 	</head>
@@ -202,6 +220,17 @@
 				</ul>
 			</div>
 			<div class="nav nav9">
+				<ul>
+					<li><a href="#">tab1</a></li>
+					<li><a href="#">tab2</a></li>
+					<li><a href="#">tab3</a></li>
+					<li><a href="#">tab4</a></li>
+					<li><a href="#">tab5</a></li>
+					<li><a href="#">tab6</a></li>
+					<li><a href="#">tab7</a></li>
+				</ul>
+			</div>
+			<div class="nav nav10">
 				<ul>
 					<li><a href="#">tab1</a></li>
 					<li><a href="#">tab2</a></li>
