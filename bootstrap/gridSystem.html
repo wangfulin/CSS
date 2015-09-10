@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>栅格系统</title>
+	
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{
+			border:1px solid #ddd;
+			background-color:rgba(86,61,124,.15);
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+		.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{
+			border:1px solid #ddd;
+			background-color:rgba(86,61,124,.15);
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+		.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{
+			border:1px solid #ddd;
+			background-color:rgba(86,61,124,.15);
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+		
+		.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{
+			border:1px solid #ddd;
+			background-color:rgba(86,61,124,.15);
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+	</style>
+  </head>
+  <body>
+	<div class="container">
+		<div class="row">
+		  <div class="col-lg-2">.col-lg-2</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		  <div class="col-lg-1">.col-lg-1</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-8">.col-md-8</div>
+		  <div class="col-md-4">.col-md-4</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-4">.col-md-4</div>
+		  <div class="col-md-4">.col-md-4</div>
+		  <div class="col-md-4">.col-md-4</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6">.col-md-6</div>
+		  <div class="col-md-6">.col-md-6</div>
+		</div>
+		
+		<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+		<div class="row">
+		  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+		  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+		</div>
+
+		<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+		<div class="row">
+		  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+		  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+		  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+		</div>
+
+		<!-- Columns are always 50% wide, on mobile and desktop -->
+		<div class="row">
+		  <div class="col-xs-6">.col-xs-6</div>
+		  <div class="col-xs-6">.col-xs-6</div>
+		</div>
+		
+		<!-- 防止左边高度过大，影响原本的列布局 -->
+		<div class="row">
+		  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3 Resize your viewport or check it out on your phone for an example.</div>
+		  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+		  <!-- Add the extra clearfix for only the required viewport -->
+		  <div class="clearfix visible-xs-block"></div>
+
+		  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+		  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+		</div>
+		
+		<div class="row">
+		  <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+		  <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+		</div>
+
+		<div class="row">
+		  <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+		  <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+		</div>
+		
+		<!-- 嵌套row的使用 -->
+		<div class="row">
+		  <div class="col-sm-9">
+			Level 1: .col-sm-9
+			<div class="row">
+			  <div class="col-xs-8 col-sm-6">
+				Level 2: .col-xs-8 .col-sm-6
+			  </div>
+			  <div class="col-xs-4 col-sm-6">
+				Level 2: .col-xs-4 .col-sm-6
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- 使用pull和push -->
+		<div class="row">
+		  <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+		  <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+		</div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
