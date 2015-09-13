@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.full-screen{
+				width:80px;
+				height:80px;
+				position:relative;
+				margin:30px;
+			}
+			.full-screen>.left-top{
+				width:0px;
+				height:0px;
+				border-left:30px solid rgb(197,85,0);
+				border-bottom:30px solid transparent;
+				position:absolute;
+				left:0px;
+				top:0px;
+			}
+			.full-screen>.left-top:after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:20px;
+				background-color:rgb(197,85,0);
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+				right:3px;
+				top:11px;
+			}
+			
+			.full-screen>.right-top{
+				width:0px;
+				height:0px;
+				border-right:30px solid rgb(197,85,0);
+				border-bottom:30px solid transparent;
+				position:absolute;
+				right:0px;
+				top:0px;
+			}
+			.full-screen>.right-top:after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:20px;
+				background-color:rgb(197,85,0);
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+				left:3px;
+				top:11px;
+			}
+			
+			.full-screen>.left-bottom{
+				width:0px;
+				height:0px;
+				border-left:30px solid rgb(197,85,0);
+				border-top:30px solid transparent;
+				position:absolute;
+				left:3px;
+				bottom:0px;
+			}
+			.full-screen>.left-bottom:after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:20px;
+				background-color:rgb(197,85,0);
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+				right:3px;
+				bottom:11px;
+			}
+			
+			.full-screen>.right-bottom{
+				width:0px;
+				height:0px;
+				border-right:30px solid rgb(197,85,0);
+				border-top:30px solid transparent;
+				position:absolute;
+				right:0px;
+				bottom:0px;
+			}
+			.full-screen>.right-bottom:after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:20px;
+				background-color:rgb(197,85,0);
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+				left:3px;
+				bottom:11px;
+			}	
+
+
+			/* exit full screen start here */
+			.exit-full-screen{
+				width:80px;
+				height:80px;
+				position:relative;
+				margin:30px;
+			}
+			.exit-full-screen>.left-top{
+				width:0px;
+				height:0px;
+				border-right:30px solid rgb(197,85,0);
+				border-top:30px solid transparent;
+				position:absolute;
+				left:0px;
+				top:0px;
+			}
+			.exit-full-screen>.left-top:after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:20px;
+				background-color:rgb(197,85,0);
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+				left:3px;
+				bottom:11px;
+			}
+			
+			.exit-full-screen>.right-top{
+				width:0px;
+				height:0px;
+				border-left:30px solid rgb(197,85,0);
+				border-top:30px solid transparent;
+				position:absolute;
+				right:0px;
+				top:0px;
+			}
+			.exit-full-screen>.right-top:after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:20px;
+				background-color:rgb(197,85,0);
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+				right:3px;
+				bottom:11px;
+			}
+			
+			.exit-full-screen>.left-bottom{
+				width:0px;
+				height:0px;
+				border-right:30px solid rgb(197,85,0);
+				border-bottom:30px solid transparent;
+				position:absolute;
+				left:3px;
+				bottom:0px;
+			}
+			.exit-full-screen>.left-bottom:after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:20px;
+				background-color:rgb(197,85,0);
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+				left:3px;
+				top:11px;
+			}
+			
+			.exit-full-screen>.right-bottom{
+				width:0px;
+				height:0px;
+				border-left:30px solid rgb(197,85,0);
+				border-bottom:30px solid transparent;
+				position:absolute;
+				right:0px;
+				bottom:0px;
+			}
+			.exit-full-screen>.right-bottom:after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:20px;
+				background-color:rgb(197,85,0);
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+				right:3px;
+				top:11px;
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="full-screen">
+			<span class="left-top">
+			
+			</span>
+			<span class="right-top">
+			
+			</span>
+			<span class="left-bottom">
+			
+			</span>
+			<span class="right-bottom">
+			
+			</span>
+		</div>
+		<div class="exit-full-screen">
+			<span class="left-top">
+			
+			</span>
+			<span class="right-top">
+			
+			</span>
+			<span class="left-bottom">
+			
+			</span>
+			<span class="right-bottom">
+			
+			</span>
+		</div>
+	</body>
+</html>
