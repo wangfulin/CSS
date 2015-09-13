@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.bike{
+				width:60px;
+				margin:30px auto;
+			}
+			.bike>.handler{
+				width:20px;
+				height:20px;
+				border-top:6px solid transparent;
+				border-left:6px solid transparent;
+				border-right:6px solid rgb(62,72,77);
+				border-bottom:6px solid rgb(62,72,77);
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg);
+				position:relative;
+			}
+			.bike>.handler::before{
+				content:"";
+				position:absolute;
+				width:20px;
+				height:6px;
+				border-top:10px solid rgb(62,72,77);
+				border-left:0px solid transparent;
+				border-right:6px solid rgb(62,72,77);
+				border-bottom:0px solid transparent;
+				-webkit-border-top-right-radius:50%;
+				-moz-border-top-right-radius:50%;
+				-ms-border-top-right-radius:50%;
+				-o-border-top-right-radius:50%;
+				border-top-right-radius:50%;
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+				left:-20px;
+				top:17px;
+			}
+			.bike>.handler::after{
+				content:"";
+				position:absolute;
+					content:"";
+				position:absolute;
+				width:20px;
+				height:6px;
+				border-top:10px solid rgb(62,72,77);
+				border-right:0px solid transparent;
+				border-left:6px solid rgb(62,72,77);
+				border-bottom:0px solid transparent;
+				-webkit-border-top-left-radius:50%;
+				-moz-border-top-left-radius:50%;
+				-ms-border-top-left-radius:50%;
+				-o-border-top-left-radius:50%;
+				border-top-left-radius:50%;
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+				right:-17px;
+				top:-16px;
+			}
+			.bike>.holder{
+				width:18px;
+				height:70px;
+				border-top:6px solid rgb(62,72,77);
+				border-left:6px solid rgb(62,72,77);
+				border-right:6px solid rgb(62,72,77);
+				border-bottom:0px solid transparent;
+				border-top-left-radius:50%;
+				border-top-right-radius:50%;
+				margin-top:20px;
+				position:relative;
+			}
+			.bike>.holder::before{
+				content:"";
+				position:absolute;
+				height:30px;
+				width:10px;
+				background-color:rgb(62,72,77);
+				top:-30px;
+				left:5px;
+			}
+			.bike>.holder::after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:6px;
+				background-color:rgb(62,72,77);
+				left:-8px;
+				top:20px;
+				-webkit-box-shadow:24px 0px 0px 0px rgb(62,72,77);
+				-moz-box-shadow:24px 0px 0px 0px rgb(62,72,77);
+				-ms-box-shadow:24px 0px 0px 0px rgb(62,72,77);
+				-o-box-shadow:24px 0px 0px 0px rgb(62,72,77);
+				box-shadow:24px 0px 0px 0px rgb(62,72,77);
+			}
+			.bike>.circle{
+				width:12px;
+				height:80px;
+				position:relative;
+				background-color:rgb(62,72,77);
+				-webkit-border-radius:6px;
+				-moz-border-radius:6px;
+				-ms-border-radius:6px;
+				-o-border-radius:6px;
+				border-radius:6px;
+				top:-50px;
+				left:9px;
+			}
+			.bike>.circle::before{
+				content:"";
+				position:absolute;
+				width:20px;
+				height:5px;
+				background-color:rgb(62,72,77);
+				left:-32px;
+				top:20px;
+			}
+			.bike>.circle::after{
+				content:"";
+				position:absolute;
+				width:20px;
+				height:5px;
+				background-color:rgb(62,72,77);
+				right:-32px;
+				top:60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bike">
+			<div class="handler">
+			
+			</div>
+			<div class="holder">
+			
+			</div>
+			<div class="circle">
+			
+			</div>
+		</div>
+	</body>
+</html>
