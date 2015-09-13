@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.bicycle{
+				position:relative;
+				display:block;
+				margin:60px auto;
+				width:300px;
+			}
+			.bicycle>.circle{
+				width:60px;
+				height:60px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				border:6px solid rgb(62,72,77);
+				display:inline-block;
+				position:relative;
+			}
+			.bicycle>.backward-circle{
+				margin-right:60px;
+			}
+			.bicycle>.backward-circle:before{
+				content:"";
+				position:absolute;
+				width:0px;
+				height:0px;
+				
+				border-radius:10px 0px 0px 0px/10px 0px 0px 0px;
+				border-left:40px solid rgb(62,72,77);
+				border-top:20px solid transparent;
+				top:-40px;
+				right:-18px;
+			}
+			.bicycle>.backward-circle:after{
+				content:"";
+				position:absolute;
+				width:0px;
+				height:0px;
+				border-bottom:50px solid rgb(62,72,77);
+				border-left:25px solid transparent;
+				border-right:25px solid transparent;
+				left:30px;
+				bottom:30px;
+			}
+			.bicycle>.forward-circle{
+				
+			}
+			.bicycle>.forward-circle:before{
+				content:"";
+				position:absolute;
+				width:30px;
+				height:80px;
+				border-left:0px solid transparent;
+				border-top:6px solid rgb(62,72,77);
+				border-right:6px solid rgb(62,72,77);
+				border-bottom:0px solid transparent;
+				-webkit-border-top-right-radius:10px;
+				-moz-border-top-right-radius:10px;
+				-ms-border-top-right-radius:10px;
+				-o-border-top-right-radius:10px;
+				border-top-right-radius:10px;
+				-webkit-transform:rotate(-10deg);
+				-moz-transform:rotate(-10deg);
+				-ms-transform:rotate(-10deg);
+				-o-transform:rotate(-10deg);
+				transform:rotate(-10deg);
+				left:-10px;
+				bottom:30px;
+			}
+			.bicycle>.forward-circle:after{
+				content:"";
+				position:absolute;
+				width:100px;
+				height:6px;
+				background-color:rgb(62,72,77);
+				-webkit-transform:rotate(-15deg);
+				-moz-transform:rotate(-15deg);
+				-ms-transform:rotate(-15deg);
+				-o-transform:rotate(-15deg);
+				transform:rotate(-15deg);
+				left:-74px;
+				top:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bicycle">
+			<div class="circle backward-circle">
+			
+			</div>
+			<div class="circle forward-circle">
+				
+			</div>
+		</div>
+	</body>
+</html>
