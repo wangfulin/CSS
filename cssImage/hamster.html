@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.hamster{
+				width:60px;
+				margin:30px auto;
+				position:relative;
+			}
+			.hamster>.head{
+				width:55px;
+				height:100px;
+				position:relative;
+				background-color:rgb(227,196,152);
+				-webkit-border-radius:10px;
+				-moz-border-radius:10px;
+				-ms-border-radius:10px;
+				-o-border-radius:10px;
+				border-radius:10px;
+			}
+			.hamster>.head>.ear{
+				width:20px;
+				height:20px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				position:absolute;
+				background-color:rgb(227,196,152);
+			}
+			.hamster>.head>.ear:after{
+				content:"";
+				position:absolute;
+				width:0px;
+				height:0px;
+				border-radius:50%;
+				border-width:5px;
+				border-style:solid;
+				left:5px;
+				top:6px;
+			}
+			.hamster>.head>.left-ear{
+				left:-10px;
+				top:-10px;
+			}
+			.hamster>.head>.left-ear:after{
+				border-color:black transparent transparent black;
+			}
+			.hamster>.head>.right-ear{
+				right:-10px;
+				top:-10px;
+			}
+			.hamster>.head>.right-ear:after{
+				border-color:black black transparent transparent;
+			}
+			.hamster>.head>.eye{
+				width:16px;
+				height:16px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				background-color:white;
+				position:absolute;
+				top:20px;
+			}
+			.hamster>.head>.eye:after{
+				content:"";
+				position:absolute;
+				width:6px;
+				height:6px;
+				background-color:black;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				top:8px;
+			}
+			.hamster>.head>.left-eye{
+				left:5px;
+			}
+			.hamster>.head>.left-eye:after{
+				left:7px;
+			}
+			.hamster>.head>.right-eye{
+				right:5px;
+			}
+			.hamster>.head>.right-eye:after{
+				right:7px;
+			}
+			.hamster>.head>.nose{
+				width:30px;
+				height:30px;
+				background-color:white;
+				position:absolute;
+				top:50px;
+				left:10px;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+			}
+			.hamster>.head>.nose:after{
+				content:"";
+				position:absolute;
+				width:10px;
+				height:10px;
+				background-color:black;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+				border-radius:50%;
+				left:10px;
+				top:-5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="hamster">
+			<div class="head">
+				<span class="ear left-ear">
+				
+				</span>
+				<span class="ear right-ear">
+				
+				</span>
+				<span class="eye left-eye">
+				
+				</span>
+				<span class="eye right-eye">
+				
+				</span>
+				<span class="nose">
+				
+				</span>
+			</div>
+		</div>
+	</body>
+</html>
