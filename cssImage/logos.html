@@ -233,6 +233,51 @@
 				top:200px;
 			}
 			/* adidas ends here */
+			
+			/* adobe starts here */
+			.adobe-wrapper{
+				width:200px;
+				height:200px;
+				padding:20px 100px;
+				position:relative;
+				margin:auto;
+				background-color:rgb(238,36,38);
+			}
+			.adobe{
+				width:200px;
+				height:200px;
+				position:relative;
+			}
+			.adobe>.left{
+				width:70px;
+				height:200px;
+				background-color:white;
+				position:absolute;
+				left:0px;
+				-webkit-transform:skew(-20deg,0deg);
+			}
+			.adobe>.left:after{
+				content:"";
+				position:absolute;
+				background-color:transparent;
+				width:40px;
+				height:40px;
+				border-left:20px solid transparent;
+				border-right:20px solid transparent;
+				border-bottom:46px solid white;
+				-webkit-transform:skew(20deg,0deg);
+				right:-60px;
+				bottom:0px;
+			}
+			.adobe>.right{
+				width:70px;
+				height:200px;
+				background-color:white;
+				position:absolute;
+				right:0px;
+				-webkit-transform:skew(20deg,0deg);
+			}
+			/* adobe ends here */
 		</style>
 	</head>
 	<body>
@@ -286,10 +331,11 @@
 					</div>
 				</div>
 			</li>
-			<li>
+			<li>Adobe
 				<div class="adobe-wrapper">
 					<div class="adobe">
-					
+						<div class="left"></div>
+						<div class="right"></div>
 					</div>
 				</div>
 			</li>
