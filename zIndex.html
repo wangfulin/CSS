@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.bg{
+				width:200px;
+				height:200px;
+				background-color:green;
+				text-align:center;
+				veritcal-align:middle;
+				line-height:200px;
+				font-size:24px;
+				font-weight:bold;
+			}
+			.fg{
+				width:200px;
+				height:200px;
+				background-color:red;
+				text-align:center;
+				veritcal-align:middle;
+				line-height:200px;
+				font-size:24px;
+				font-weight:bold;
+			}
+			.fix-test{
+				position:relative;
+				height:320px;
+			}
+			.fix-test .bg{
+				position:fixed;
+				left:10px;
+				top:510px;
+				z-index:10;
+			}
+			.fix-test .fg{
+				position:fixed;
+				left:100px;
+				top:620px;
+				z-index:1;
+			}
+			.abs-test{
+				position:relative;
+				height:320px;		
+			}
+			.abs-test .bg{
+				position:absolute;
+				left:10px;
+				top:10px;
+				z-index:-2;
+			}
+			.abs-test .fg{
+				position:absolute;
+				left:100px;
+				top:120px;
+				z-index:-3;
+			}
+			.rel-test{
+				postion:relative;
+				height:320px;
+			}
+			.rel-test .bg{
+				position:relative;
+				z-index:1000;
+			}
+			.rel-test .fg{
+				position:relative;
+				top:-90px;
+				left:90px;
+				z-index:-1;
+			}
+			.sta-test{
+				position:relative;
+				height:320px;
+			}
+			.sta-test .bg{
+				z-index:10;
+				overflow:hidden;
+			}
+			.inner{
+				width:200px;
+				height:200px;
+				background-color:yellow;
+				margin-left:100px;
+				margin-top:-200px;
+			}
+			.sta-test .fg{
+				margin-left:90px;
+				margin-top:-110px;
+				z-index:10000;
+			}
+			.mix-test{
+				height:500px;
+				position:relative;
+			}
+			.pos{
+				width:200px;
+				height:200px;
+				text-align:center;
+				line-height:200px;
+				font-size:24px;
+				font-weight:bold;
+				vertical-align:middle;
+			}
+			.sta{
+				background-color:red;
+				margin-left:10px;
+			}
+			.abs{
+				position:absolute;
+				left:130px;
+				top:120px;
+				background-color:orange;
+				z-index:-3;
+			}
+			.fix{
+				position:fixed;
+				left:250px;
+				top:240px;
+				background-color:yellow;
+				z-index:-2;
+			}
+			.rel{
+				position:relative;
+				left:370px;
+				top:180px;
+				background-color:green;
+				z-index:-1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mix-test">
+			<div class="sta pos">
+				Static
+			</div>
+			<div class="abs pos">
+				Absolute
+			</div>
+			<div class="fix pos">
+				Fix
+			</div>
+			<div class="rel pos">
+				Relative
+			</div>
+		</div>
+		<div class="fix-test">
+			<div class="bg">	
+				Fixed
+			</div>
+			<div class="fg">
+				Fixed
+			</div>
+		</div>
+		<div class="abs-test">
+			<div class="bg">
+				Absolute
+			</div>
+			<div class="fg">
+				Absolute
+			</div>
+		</div>
+		<div class="rel-test">
+			<div class="bg">
+				Relative
+			</div>
+			<div class="fg">
+				Relative
+			</div>
+		</div>
+		<div class="sta-test">
+			<div class="bg">
+				Static
+				<div class="inner">
+				
+				</div>
+			</div>
+			<div class="fg">
+				Static
+			</div>
+		</div>
+	</body>
+</html>
