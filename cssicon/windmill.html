@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.first-windmill{
+				position:absolute;
+				top:100px;
+				left:100px;
+				width:8px;
+				height:8px;
+				border-radius:50%;
+				background-color:transparent;
+				box-shadow:10px 36px 0px 0px green;
+			}
+			.first-windmill:before{
+				width:0px;
+				height:0px;
+				left:-4px;
+				top:-4px;
+				position:absolute;
+				content:"";
+				border-right:14px solid red;
+				border-top:40px solid transparent;
+				transform-origin:right bottom;
+				-webkit-transform-origin:right bottom;
+				-moz-transform-origin:right bottom;
+				-ms-transform-origin:right bottom;
+				-o-transform-origin:right bottom;
+			}
+			.first-windmill:after{
+				width:0px;
+				height:0px;
+				position:absolute;
+				left:4px;
+				top:-4px;
+				content:"";
+				border-right:14px solid red;
+				border-top:40px solid transparent;
+				transform:rotate(90deg);
+				-webkit-transform:rotate(90deg);
+				-moz-transform:rotate(90deg);
+				-ms-transform:rotate(90deg);
+				-o-transform:rotate(90deg);
+				transform-origin:right bottom;
+				-webkit-transform-origin:right bottom;
+				-moz-transform-origin:right bottom;
+				-ms-transform-origin:right bottom;
+				-o-transform-origin:right bottom;
+			}
+			.second-windmill{
+				position:absolute;
+				left:100px;
+				top:100px;
+				width:0px;
+				height:0px;
+			}
+			.second-windmill:before{
+				width:0px;
+				height:0px;
+				position:absolute;
+				left:4px;
+				top:4px;
+				content:"";
+				border-right:14px solid red;
+				border-top:40px solid transparent;
+				transform:rotate(180deg);
+				-webkit-transform:rotate(180deg);
+				-moz-transform:rotate(180deg);
+				-ms-transform:rotate(180deg);
+				-o-transform:rotate(180deg);
+				transform-origin:right bottom;
+				-webkit-transform-origin:right bottom;
+				-moz-transform-origin:right bottom;
+				-ms-transform-origin:right bottom;
+				-o-transform-origin:right bottom;
+			}
+			.second-windmill:after{
+				width:0px;
+				height:0px;
+				position:absolute;
+				content:"";
+				left:-4px;
+				top:4px;
+				border-right:14px solid red;
+				border-top:40px solid transparent;
+				transform:rotate(270deg);
+				-webkit-transform:rotate(270deg);
+				-moz-transform:rotate(270deg);
+				-ms-transform:rotate(270deg);
+				-o-transform:rotate(270deg);
+				transform-origin:right bottom;
+				-webkit-transform-origin:right bottom;
+				-moz-transform-origin:right bottom;
+				-ms-transform-origin:right bottom;
+				-o-transform-origin:right bottom;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="first-windmill">
+
+		</div>
+		<div class="second-windmill">
+
+		</div>
+	</body>
+</html>
