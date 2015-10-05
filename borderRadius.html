@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			div{
+				margin:20px;
+				display:inline-block;
+				background-color:orange;
+				border:10px solid green;
+			}
+			.circle{
+				width:100px;
+				height:100px;
+				border-radius:50%;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+			}
+			.left-half-circle{
+				width:50px;
+				border-radius:100% 0px 0px 100%/50%;
+				-webkit-border-radius:100% 0px 0px 100%/50%;
+				-moz-border-radius:100% 0px 0px 100%/50%;
+				-ms-border-radius:100% 0px 0px 100%/50%;
+				-o-border-radius:100% 0px 0px 100%/50%;
+			}
+			.right-half-circle{
+				width:50px;
+				border-radius:0px 100% 100% 0px/50%;
+				-webkit-border-radius:0px 100% 100% 0px/50%;
+				-moz-border-radius:0px 100% 100% 0px/50%;
+				-ms-border-radius:0px 100% 100% 0px/50%;
+				-o-border-radius:0px 100% 100% 0px/50%;
+			}
+			.top-half-circle{
+				height:50px;
+				border-radius:50%/100% 100% 0px 0px;
+				-webkit-border-radius:50%/100% 100% 0px 0px;
+				-moz-border-radius:50%/100% 100% 0px 0px;
+				-ms-border-radius:50%/100% 100% 0px 0px;
+				-o-border-radius:50%/100% 100% 0px 0px;
+			}
+			.bottom-half-circle{
+				height:50px;
+				border-radius:50%/0 0 100% 100%;
+				-webkit-border-radius:50%/0 0 100% 100%;
+				-moz-border-radius:50%/0 0 100% 100%;
+				-ms-border-radius:50%/0 0 100% 100%;
+				-o-border-radius:50%/0 0 100% 100%;
+			}
+			.left-top-quater-circle{
+				border-radius:100% 0 0/100% 0 0;
+				-webkit-border-radius:100% 0 0/100% 0 0;
+				-moz-border-radius:100% 0 0/100% 0 0;
+				-ms-border-radius:100% 0 0/100% 0 0;
+				-o-border-radius:100% 0 0/100% 0 0;
+			}
+			.right-top-quater-circle{
+				border-radius:0 100% 0 0/0 100% 0 0;
+				-webkit-border-radius:0 100% 0 0/0 100% 0 0;
+				-moz-border-radius:0 100% 0 0/0 100% 0 0;
+				-ms-border-radius:0 100% 0 0/0 100% 0 0;
+				-o-border-radius:0 100% 0 0/0 100% 0 0;
+			}
+			.left-bottom-quater-circle{
+				border-radius:0 0 0 100%/0 0 0 100%;
+				-webkit-border-radius:0 0 0 100%/0 0 0 100%;
+				-moz-border-radius:0 0 0 100%/0 0 0 100%;
+				-ms-border-radius:0 0 0 100%/0 0 0 100%;
+				-o-border-radius:0 0 0 100%/0 0 0 100%;
+			}
+			.right-bottom-quater-circle{
+				border-radius:0 0 100% 0/0 0 100% 0;
+				-webkit-border-radius:0 0 100% 0/0 0 100% 0;
+				-moz-border-radius:0 0 100% 0/0 0 100% 0;
+				-ms-border-radius:0 0 100% 0/0 0 100% 0;
+				-o-border-radius:0 0 100% 0/0 0 100% 0;
+			}
+			.eclipse{
+				width:200px;
+				height:100px;
+				border-radius:50%;
+				-webkit-border-radius:50%;
+				-moz-border-radius:50%;
+				-ms-border-radius:50%;
+				-o-border-radius:50%;
+			}
+			.left-half-eclipse{
+				width:100px;
+				border-radius:100% 0px 0px 100%/50%;
+				-webkit-border-radius:100% 0px 0px 100%/50%;
+				-moz-border-radius:100% 0px 0px 100%/50%;
+				-ms-border-radius:100% 0px 0px 100%/50%;
+				-o-border-radius:100% 0px 0px 100%/50%;
+			}
+			.right-half-eclipse{
+				width:100px;
+				border-radius:0px 100% 100% 0px/50%;
+				-webkit-border-radius:0px 100% 100% 0px/50%;
+				-moz-border-radius:0px 100% 100% 0px/50%;
+				-ms-border-radius:0px 100% 100% 0px/50%;
+				-o-border-radius:0px 100% 100% 0px/50%;
+			}
+			.top-half-eclipse{
+				height:50px;
+				border-radius:50%/100% 100% 0px 0px;
+				-webkit-border-radius:50%/100% 100% 0px 0px;
+				-moz-border-radius:50%/100% 100% 0px 0px;
+				-ms-border-radius:50%/100% 100% 0px 0px;
+				-o-border-radius:50%/100% 100% 0px 0px;
+			}
+			.bottom-half-eclipse{
+				height:50px;
+				border-radius:50%/0 0 100% 100%;
+				-webkit-border-radius:50%/0 0 100% 100%;
+				-moz-border-radius:50%/0 0 100% 100%;
+				-ms-border-radius:50%/0 0 100% 100%;
+				-o-border-radius:50%/0 0 100% 100%;
+			}
+			.left-top-quater-eclipse{
+				border-radius:100% 0 0/100% 0 0;
+				-webkit-border-radius:100% 0 0/100% 0 0;
+				-moz-border-radius:100% 0 0/100% 0 0;
+				-ms-border-radius:100% 0 0/100% 0 0;
+				-o-border-radius:100% 0 0/100% 0 0;
+			}
+			.right-top-quater-eclipse{
+				border-radius:0 100% 0 0/0 100% 0 0;
+				-webkit-border-radius:0 100% 0 0/0 100% 0 0;
+				-moz-border-radius:0 100% 0 0/0 100% 0 0;
+				-ms-border-radius:0 100% 0 0/0 100% 0 0;
+				-o-border-radius:0 100% 0 0/0 100% 0 0;
+			}
+			.left-bottom-quater-eclipse{
+				border-radius:0 0 0 100%/0 0 0 100%;
+				-webkit-border-radius:0 0 0 100%/0 0 0 100%;
+				-moz-border-radius:0 0 0 100%/0 0 0 100%;
+				-ms-border-radius:0 0 0 100%/0 0 0 100%;
+				-o-border-radius:0 0 0 100%/0 0 0 100%;
+			}
+			.right-bottom-quater-eclipse{
+				border-radius:0 0 100% 0/0 0 100% 0;
+				-webkit-border-radius:0 0 100% 0/0 0 100% 0;
+				-moz-border-radius:0 0 100% 0/0 0 100% 0;
+				-ms-border-radius:0 0 100% 0/0 0 100% 0;
+				-o-border-radius:0 0 100% 0/0 0 100% 0;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div class="circle">
+			
+		</div>
+		<div class="circle left-half-circle">
+
+		</div>
+		<div class="circle right-half-circle">
+
+		</div>
+		<div class="circle top-half-circle">
+
+		</div>
+		<div class="circle bottom-half-circle">
+
+		</div>
+		<div class="circle left-top-quater-circle">
+
+		</div>
+		<div class="circle right-top-quater-circle">
+
+		</div>
+		<div class="circle left-bottom-quater-circle">
+
+		</div>
+		<div class="circle left-bottom-quater-circle">
+
+		</div>
+		
+		<!-- eclipse starts here -->
+		<div class="eclipse">
+
+		</div>
+		<div class="eclipse left-half-eclipse">
+
+		</div>
+		<div class="eclipse right-half-eclipse">
+
+		</div>
+		<div class="eclipse top-half-eclipse">
+
+		</div>
+		<div class="eclipse bottom-half-eclipse">
+
+		</div>
+		<div class="eclipse left-top-quater-eclipse">
+
+		</div>
+		<div class="eclipse right-top-quater-eclipse">
+
+		</div>
+		<div class="eclipse left-bottom-quater-eclipse">
+
+		</div>
+		<div class="eclipse left-bottom-quater-eclipse">
+
+		</div>
+	</body>
+</html>
