@@ -6,6 +6,14 @@
 	border:1px solid purple;
 	margin:30px;
 }
+.table-wrapper{
+	display:table;
+}
+.flex-wrapper{
+	display:-webkit-flex;
+	justify-content:center;
+	align-items:center;
+}
 
 .center{
 	width:300px;
@@ -59,11 +67,12 @@
 .four{
 	margin:50px auto;
 }
-
-.five{
-	
-
-	display:inline-block;
+.cell-wrapper{
+	width:500px;
+	display:table-cell;
 	text-align:center;
 	vertical-align:middle;
+}
+.five{
+	display:inline-block;
 }

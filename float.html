@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			div{
+				overflow:hidden;
+				zoom:1;
+				float:left;
+				position:relative;
+				width:1260px;
+			}
+			ul{
+				list-style:none;
+				margin:0px;
+				padding:0px;
+				overflow:hidden;
+				width:100%;
+				height:120px;
+				float:left;
+				position:relative;
+				
+			}
+			.clearfix{
+				zoom:1;
+			}
+			ul>li{
+				float:left;
+				width:400px;
+				height:100px;
+				border:10px solid orange;
+				background-color:violet;
+				overflow:hidden;
+				vertical-align:top;
+				margin:0px;
+				padding:0px;
+				display:block;
+			}
+			span{
+				clear:both;
+			}
+			ul>li>div{
+				display:block;
+				width:400px;
+				height:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul class="clearfix">
+				<li class="clearfix">
+					<div></div>
+				</li>
+				<li class="clearfix">
+					<div></div>
+				</li>
+				<li class="clearfix">
+					<div></div>
+				</li>
+				<span></span>
+			</ul>
+		</div>
+	</body>
+</html>
