@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+		
+		</style>
+		<script>
+			window.onload=function(){
+				var content=document.getElementById("content");
+				var display=document.getElementById("display");
+				var selection;
+				window.onmouseup=window.onmousemove=function(){
+					selection=document.getSelection();
+					//console.log("test");
+					if(selection.rangeCount>0){
+						var range=selection.getRangeAt(0).toString();
+						//console.log(range.toString());
+						if(range&&range.trim()!==''){
+							display.innerText=range;
+						}else{
+							display.innerText="";
+						}
+					}else{
+						display.innerText="";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="word-to-select" id="content">
+			This is a test to range and selection
+		</div>
+		<div class="word-selected" id="display">
+		
+		</div>
+	</body>
+</html>
