@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>20种CSS高级技巧</title>
+		<script>
+		
+		</script>
+		<style>
+			.skill-one>img{
+				width:80px;
+				height:80px;
+			}
+			.skill-one>img.desaturate{
+				width:80px;
+				height:80px;
+				filter:grayscale(100%);
+				-webkit-filter:grayscale(100%);
+			}
+			
+			.skill-two>ul.nav{
+				list-style:none;
+				margin:0px;
+				padding:0px;
+			}
+			.skill-two>ul.nav>li{
+				float:left;
+				padding:4px 20px;
+			}
+			/* 方法一 */
+			.skill-two>ul.nav>li{
+				border-right:1px solid #666;
+			}
+			.skill-two>ul.nav>li:last-child{
+				border-right:none;
+			}
+			/* 方法一结束 */
+			
+			/* 方法二开始 */
+			.skill-two>ul.nav>li:not(:last-child){
+				border-right:1px solid #666;
+			}
+			/* 方法二结束  */
+			
+			/* 方法三开始 */
+			.skill-two>ul.nav>li:first-child~li{
+				border-left:1px solid #666;
+			}
+			/* 方法三结束 */
+			
+			body.skill-three:before{
+				content:"";
+				position:fixed;
+				top:-10px;
+				left:0px;
+				width:100%;
+				height:10px;
+				
+				-webkit-box-shadow:0px 0px 10px rgba(0,0,0,0.8);
+				-moz-box-shadow:0px 0px 10px rgba(0,0,0,0.8);
+				-ms-box-shadow:0px 0px 10px rgba(0,0,0,0.8);
+				-o-box-shadow:0px 0px 10px rgba(0,0,0,0.8);
+				box-shadow:0px 0px 10px rgba(0,0,0,0.8);
+				
+				z-index:100;
+			}
+			
+			body{
+				line-height:1;
+			}
+			
+			html,body{
+				height:100%;
+				margin:0px;
+			}
+			body{
+				/* -wekbit-align-items:center;
+				-ms-flex-align:center;
+				align-items:center;
+				display:-webkit-flex;
+				display:flex;*/
+			}
+			
+			.skill-six>ul{
+				list-style:none;
+				margin:0px;
+			}
+			.skill-six>ul>li{
+				margin:0px;
+				padding:0px;
+				float:left;
+				padding:4px 3px;
+			}
+			.skill-six>ul>li:not(:last-child)::after{
+				content:",";
+			}
+			
+			.skill-seven{
+				position:relative;
+				overflow:hidden;
+			}
+			.skill-seven>ul>li{
+				display:none;
+			}
+			.skill-seven>ul>li:nth-child(-n+3){
+				display:block;
+			}
+			
+			.skill-eight>.logo{
+				background:url("logo.svg");
+			}
+			
+			.skill-nine{
+				-moz-osx-font-smoothing:grayscale;
+				-webkit-font-smoothing:antialiased;
+				text-rendering:optimizeLegibility;
+			}
+			
+			.skill-ten ul{
+				max-height:0px;
+				overflow:hidden;
+				background-color:violet;
+			}
+			.skill-ten:hover ul{
+				max-height:1000px;
+				-webkit-transition:.3s ease;
+				-moz-transition:.3s ease;
+				-ms-transition:.3s ease;
+				-o-transition:.3s ease;
+				transition:.3s ease;
+			}
+			
+			html{
+				box-sizing:border-box;
+			}
+			*,*:before,*:after{
+				box-sizing:inherit;
+			}
+			
+			.skill-twelve table{
+				width:400px;
+				border:1px solid green;
+				table-layout:fixed;
+			}
+			.skill-twelve table td{
+				border:1px solid red;
+			}
+			
+			skill-nineteen .disabled{
+				pointer-events:none;
+			}
+			
+			.test3 span {
+  position: relative;
+}
+.test3 span a {
+  position: relative;
+  z-index: 2;
+}
+.test3 span a:hover, .test3 span a:active {
+  z-index: 4;
+}
+.test3 span input {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 101%;  /* Hacky */
+  height: 301%; /* Hacky */
+  z-index: 3;
+}
+.test3 span input:focus {
+  background: transparent;
+  border: 0;
+  z-index: 1;
+}
+		</style>
+	</head>
+	<body class="skill-three">
+		<div class="skill-one">
+			<img title="" alt="" src="imgs/bg1.jpg" />
+			<img class="desaturate" title="" alt="" src="imgs/bg1.jpg" />
+		</div>
+		<div class="skill-two">
+			<ul class="nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Content</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>
+		<div class="skill-six">
+			<ul>
+				<li><a href="#">list1</a></li>
+				<li><a href="#">list2</a></li>
+				<li><a href="#">list3</a></li>
+				<li><a href="#">list4</a></li>
+			</ul>
+		</div>
+		<div class="skill-seven">
+			<ul>
+				<li><a href="#">item1</a></li>
+				<li><a href="#">item2</a></li>
+				<li><a href="#">item3</a></li>
+				<li><a href="#">item4</a></li>
+			</ul>
+		</div>
+		<div class="skill-eight">
+			<div class="logo">
+			
+			</div>
+		</div>
+		
+		<div clas="skill-nine">
+			<div>This is 王福林</div>
+		</div>
+		
+		<div class="skill-ten">
+			<ul>
+				This is skill ten
+			</ul>
+		</div>
+		
+		<div class="skill-twelve">
+			<table>
+				<tr>
+					<td>row1-col1</td>
+					<td>row1-col2</td>
+				</tr>
+				<tr>
+					<td>row2-col1</td>
+					<td>row2-col2</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="skill-nineteen">
+				<a class="disabled" href="http://www.baidu.com">鼠标无法点击</a>
+		</div>
+		
+		<div class="test3">
+			<span><input type="text" value=" " readonly="true" />
+			<a href="http://www.baidu.com">Double click me</a></span>
+		</div>
+	</body>
+</html>
