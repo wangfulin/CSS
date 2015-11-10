@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.top-left-angle{
+				width:100%;
+				height:600px;
+				position:relative;
+				z-index:1;
+				background-image:url("imgs/bg1.jpg");
+			}
+			.top-left-angle:after{
+				content:"";
+				position:absolute;
+				width:100%;
+				height:100%;
+				right:0px;
+				bottom:0px;
+				display:block;
+				z-index:-1;
+				left:0px;
+				z-index:-1;
+				transform:skewY(20deg);
+				-webkit-transform: skewY(20deg);
+				-moz-transform: skewY(20deg);
+				-ms-transform: skewY(20deg);
+				-o-transform: skewY(20deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="angle top-left-angle">
+		
+		</div>
+		<div class="angle top-right-angle">
+		
+		</div>
+		<div class="angle bottom-left-angle">
+		
+		</div>
+		<div class="angle bottom-right-angle">
+		
+		</div>
+	</body>
+</html>

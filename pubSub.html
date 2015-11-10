@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>监听响应demo</title>
+		<style>
+			.result_container>span{
+				display:inline-block;
+				min-width:120px;
+				height:46px;
+				border-radius:5px;
+				-webkit-border-radius:5px;
+				-moz-border-radius:5px;
+				-ms-border-radius:5px;
+				-o-border-radius:5px;
+				text-align:center;
+				line-height:46px;
+				vertical-align:middle;
+				background-color:rgb(45,190,96);
+				margin-left:100px;
+				font-weight:bold;
+				font-size:32px;
+				color:white;
+			}
+			.change_source_container>ul{
+				list-style:none;
+			}
+			.change_source_container>ul>li>input{
+				width:280px;
+				height:32px;
+				margin:8px;
+				padding-left:8px;
+				font-weight:bold;
+				font-size:24px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="pub_sub_container">
+			<div class="change_source_container">
+				<ul>
+					<li><input class="one" type="text" value="1" /></li>
+					<li><input class="two" type="text" value="1" /></li>
+					<li><input class="three" type="text" value="1" /></li>
+				</ul>
+			</div>
+			<div class="result_container">
+				<span>1<span>
+			</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			var $changes=$(".change_source_container>ul>li>input"),
+				$result=$(".result_container>span"),
+				$container=$(".pub_sub_container");
+			var values={"one":1,"two":1,"three":1};	
+			// 子元素发生某些事件后触发事件（需要被监听改变）
+			$changes.bind("keyup",function(){
+				
+				// todo:判断数据是否真的发生变化
+				
+				values[$(this).attr("class")]=$(this).val();
+				
+				$(this).trigger("inputChange",values);
+				return false;
+			});
+			
+			// 子元素监听到事件响应之后触发父元素的事件，同时将监听到的数据传递给父元素
+			$changes.bind("inputChange",function(event,values){
+				$container.trigger("inputChange",values);
+				return false;
+			});
+			
+			// 父元素触发监听到的数据要作用的对象，同时渲染出结果
+			$container.bind("inputChange",function(event,values){
+				$result.html(multiply(values));
+				return false;
+			});
+			
+			function multiply(values){
+				var	result=1;
+				for(var key in values){
+					if(values.hasOwnProperty(key)){
+						result=result*parseInt(values[key]);
+					}
+				}
+				return result;
+			}
+		</script>
+	</body>
+</html>
